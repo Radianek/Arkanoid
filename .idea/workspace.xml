@@ -20,32 +20,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="666b959d-4b4e-43c0-8fb5-cd221a2a99fd" name="Changes" comment="Etap 3&#10;-Stworzona hierarchia klas zgodnie z diagramem&#10;-brak implementacji klas&#10;-Program się uruchamia&#10;-pojawia się puste okno">
-      <change afterPath="$PROJECT_DIR$/Arkanoid.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Arkanoid.h" afterDir="false" />
+    <list default="true" id="666b959d-4b4e-43c0-8fb5-cd221a2a99fd" name="Changes" comment="Dodanie rysowania piłki">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ball.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Ball.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ball.h" beforeDir="false" afterPath="$PROJECT_DIR$/Ball.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Block.h" beforeDir="false" afterPath="$PROJECT_DIR$/Block.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/.cmake/api/v1/reply/codemodel-v2-6e6d96db832f1ff08e9b.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/.cmake/api/v1/reply/index-2023-05-19T10-48-27-0432.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/.cmake/api/v1/reply/target-projekt-Release-963e2a79442b387d554e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/Ball.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/Ball.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/compiler_depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/main.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/main.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/main.cpp.obj.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/objects1.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/objects1.rsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-release/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/projekt.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/projekt.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-release/projekt.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/projekt.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
@@ -140,7 +122,7 @@
       <workItem from="1684326260227" duration="210000" />
       <workItem from="1684326486403" duration="86000" />
       <workItem from="1684326872136" duration="410000" />
-      <workItem from="1684490309684" duration="9067000" />
+      <workItem from="1684490309684" duration="14691000" />
     </task>
     <task id="LOCAL-00001" summary="piewszy commit">
       <created>1683474850117</created>
@@ -233,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684493707072</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Dodanie rysowania piłki">
+      <created>1684499765357</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1684499765357</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,6 +245,7 @@
     <MESSAGE value="Czarne okno" />
     <MESSAGE value="Tworzenie piłki" />
     <MESSAGE value="Etap 3&#10;-Stworzona hierarchia klas zgodnie z diagramem&#10;-brak implementacji klas&#10;-Program się uruchamia&#10;-pojawia się puste okno" />
-    <option name="LAST_COMMIT_MESSAGE" value="Etap 3&#10;-Stworzona hierarchia klas zgodnie z diagramem&#10;-brak implementacji klas&#10;-Program się uruchamia&#10;-pojawia się puste okno" />
+    <MESSAGE value="Dodanie rysowania piłki" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dodanie rysowania piłki" />
   </component>
 </project>

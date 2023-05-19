@@ -15,15 +15,22 @@ int main()
 
     while(window.isOpen())
     {
-        window.clear( Color::Black);// Wyczyszczenie zawartości okna, ustawienie czarnego tła
-        window.pollEvent(event);// Pobieranie zdarzeń związanych z oknem
+        // Wyczyszczenie zawartości okna, ustawienie czarnego tła
+        window.clear( Color::Black);
+
+        // Pobieranie zdarzeń związanych z oknem
+        window.pollEvent(event);
 
         if(event.type == Event::Closed)
         {
             window.close();
             break;
         }
-        window.draw(ball.getShape());// Pobranie kształtu piłki i przekazanie go do metody window.draw()
+        ball.update();
+
+        // Pobranie kształtu piłki i przekazanie go do window.draw()
+        window.draw(ball.getShape());
+
         window.display();
     }
 
