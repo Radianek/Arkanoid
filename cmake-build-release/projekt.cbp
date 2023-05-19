@@ -88,6 +88,24 @@
 		<Unit filename="C:/Users/adm/CLionProjects/Arkanoid/Ball.h">
 			<Option target="projekt"/>
 		</Unit>
+		<Unit filename="C:/Users/adm/CLionProjects/Arkanoid/Block.cpp">
+			<Option target="projekt"/>
+		</Unit>
+		<Unit filename="C:/Users/adm/CLionProjects/Arkanoid/Block.h">
+			<Option target="projekt"/>
+		</Unit>
+		<Unit filename="C:/Users/adm/CLionProjects/Arkanoid/Controls.cpp">
+			<Option target="projekt"/>
+		</Unit>
+		<Unit filename="C:/Users/adm/CLionProjects/Arkanoid/Controls.h">
+			<Option target="projekt"/>
+		</Unit>
+		<Unit filename="C:/Users/adm/CLionProjects/Arkanoid/Paddle.cpp">
+			<Option target="projekt"/>
+		</Unit>
+		<Unit filename="C:/Users/adm/CLionProjects/Arkanoid/Paddle.h">
+			<Option target="projekt"/>
+		</Unit>
 		<Unit filename="C:/Users/adm/CLionProjects/Arkanoid/main.cpp">
 			<Option target="projekt"/>
 		</Unit>

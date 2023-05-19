@@ -4,9 +4,9 @@
 
 #ifndef PROJEKT_BALL_H
 #define PROJEKT_BALL_H
+#include <SFML/Graphics.hpp>
 
-
-class Ball {
+class Ball{
 
 };
 

@@ -152,6 +152,78 @@ Ball.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt.dir\build.make CMakeFiles/projekt.dir/Ball.cpp.s
 .PHONY : Ball.cpp.s
 
+Block.obj: Block.cpp.obj
+.PHONY : Block.obj
+
+# target to build an object file
+Block.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt.dir\build.make CMakeFiles/projekt.dir/Block.cpp.obj
+.PHONY : Block.cpp.obj
+
+Block.i: Block.cpp.i
+.PHONY : Block.i
+
+# target to preprocess a source file
+Block.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt.dir\build.make CMakeFiles/projekt.dir/Block.cpp.i
+.PHONY : Block.cpp.i
+
+Block.s: Block.cpp.s
+.PHONY : Block.s
+
+# target to generate assembly for a file
+Block.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt.dir\build.make CMakeFiles/projekt.dir/Block.cpp.s
+.PHONY : Block.cpp.s
+
+Controls.obj: Controls.cpp.obj
+.PHONY : Controls.obj
+
+# target to build an object file
+Controls.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt.dir\build.make CMakeFiles/projekt.dir/Controls.cpp.obj
+.PHONY : Controls.cpp.obj
+
+Controls.i: Controls.cpp.i
+.PHONY : Controls.i
+
+# target to preprocess a source file
+Controls.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt.dir\build.make CMakeFiles/projekt.dir/Controls.cpp.i
+.PHONY : Controls.cpp.i
+
+Controls.s: Controls.cpp.s
+.PHONY : Controls.s
+
+# target to generate assembly for a file
+Controls.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt.dir\build.make CMakeFiles/projekt.dir/Controls.cpp.s
+.PHONY : Controls.cpp.s
+
+Paddle.obj: Paddle.cpp.obj
+.PHONY : Paddle.obj
+
+# target to build an object file
+Paddle.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt.dir\build.make CMakeFiles/projekt.dir/Paddle.cpp.obj
+.PHONY : Paddle.cpp.obj
+
+Paddle.i: Paddle.cpp.i
+.PHONY : Paddle.i
+
+# target to preprocess a source file
+Paddle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt.dir\build.make CMakeFiles/projekt.dir/Paddle.cpp.i
+.PHONY : Paddle.cpp.i
+
+Paddle.s: Paddle.cpp.s
+.PHONY : Paddle.s
+
+# target to generate assembly for a file
+Paddle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt.dir\build.make CMakeFiles/projekt.dir/Paddle.cpp.s
+.PHONY : Paddle.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -188,6 +260,15 @@ help:
 	@echo ... Ball.obj
 	@echo ... Ball.i
 	@echo ... Ball.s
+	@echo ... Block.obj
+	@echo ... Block.i
+	@echo ... Block.s
+	@echo ... Controls.obj
+	@echo ... Controls.i
+	@echo ... Controls.s
+	@echo ... Paddle.obj
+	@echo ... Paddle.i
+	@echo ... Paddle.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
