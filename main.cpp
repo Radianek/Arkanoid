@@ -1,8 +1,25 @@
 #include <SFML/Graphics.hpp>
+#include <SFML/Window.hpp>
+
+using namespace std;
+using namespace sf;
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(640, 480), "SFML Application");
+    RenderWindow window(sf::VideoMode(640, 480), "SFML Application");
+    window.setFramerateLimit(60);
+    Event event;
+
+    while(true)
+    {
+        window.clear( Color::Black);
+        window.pollEvent(event);
+        window.display();
+    }
+
+
+}
+/*
     sf::CircleShape shape;
     shape.setRadius(40.f);
     shape.setPosition(100.f, 100.f);
@@ -22,4 +39,4 @@ int main()
         window.draw(shape);
         window.display();
     }
-}
+*/
