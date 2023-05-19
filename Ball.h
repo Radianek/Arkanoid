@@ -22,8 +22,8 @@ private:
     // Obiekt CircleShape reprezentujący kształt piłki
     CircleShape shape;
 
-    const float ball_radius{10.0f};
-    const float ball_velocity{3.0f};
+    const float ball_radius{25.0f};
+    const float ball_velocity{5.0f};
     Vector2f velocity {ball_velocity, ball_velocity};
     void draw(RenderTarget& target, RenderStates state)const;
 };

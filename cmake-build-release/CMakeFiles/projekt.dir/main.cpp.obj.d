@@ -242,4 +242,5 @@ CMakeFiles/projekt.dir/main.cpp.obj: \
  C:/SFML/include/SFML/Graphics/Sprite.hpp \
  C:/SFML/include/SFML/Graphics/Text.hpp \
  C:/SFML/include/SFML/Graphics/VertexBuffer.hpp \
- C:\Users\adm\CLionProjects\Arkanoid\Ball.h
+ C:\Users\adm\CLionProjects\Arkanoid\Ball.h \
+ C:\Users\adm\CLionProjects\Arkanoid\Paddle.h

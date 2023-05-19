@@ -28,16 +28,16 @@ void Ball::update() {
     {
         velocity.x =ball_velocity;
     }
-    else if(this->right()>1000) //ZMIENIC TO !!!!
+    else if(this->right()>1000) //ZMIENIC TO 1000!!!!
     {
         velocity.x = -ball_velocity;
     }
 
-    if(this->top()<10)
+    if(this->top()<2*ball_radius)
     {
         velocity.y =ball_velocity;
     }
-    else if(this->bottom()>980) //ZMIENIC TO !!!! jakos przekzazc szerokosc okna aplikacji i odjąc od niej wartosc miedzy 10-20
+    else if(this->bottom()>999-2*ball_radius) //ZMIENIC TO !!!! jakos przekzazc szerokosc okna aplikacji
     {
         velocity.y = -ball_velocity;
     }

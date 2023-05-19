@@ -1,14 +1,18 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 #include "Ball.h"
+#include "Paddle.h"
 
 
 using namespace std;
 using namespace sf;
 
+
 int main()
 {
+
     Ball ball(500, 500);
+    Paddle paddle(950, 950);
     RenderWindow window(sf::VideoMode(1000, 1000), "Arcanoid");
     window.setFramerateLimit(60);
     Event event;
@@ -27,9 +31,11 @@ int main()
             break;
         }
         ball.update();
+        paddle.update();
 
-        // Pobranie kształtu piłki i przekazanie go do window.draw()
+        //
         window.draw(ball.getShape());
+        window.draw(paddle.getShape());
 
         window.display();
     }
