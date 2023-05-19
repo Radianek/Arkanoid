@@ -1,14 +1,17 @@
-//
-// Created by adm on 19.05.2023.
-//
-
-#ifndef PROJEKT_BALL_H
-#define PROJEKT_BALL_H
+#ifndef BALL_H
+#define BALL_H
 #include <SFML/Graphics.hpp>
 
-class Ball{
+using namespace sf;
 
+class Ball{
+public:
+    Ball(float pos_X, float pos_Y);
+    const CircleShape& getShape() const;// Metoda do pobierania kształtu piłki
+private:
+    CircleShape shape; // Obiekt CircleShape reprezentujący kształt piłki
+    const float ball_radius{10.0f};
+    void draw(RenderTarget& target, RenderStates state)const;
 };
 
-
-#endif //PROJEKT_BALL_H
+#endif

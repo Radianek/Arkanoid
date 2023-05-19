@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/projekt.dir/Arkanoid.cpp.obj"
+  "CMakeFiles/projekt.dir/Arkanoid.cpp.obj.d"
   "CMakeFiles/projekt.dir/Ball.cpp.obj"
   "CMakeFiles/projekt.dir/Ball.cpp.obj.d"
   "CMakeFiles/projekt.dir/Block.cpp.obj"

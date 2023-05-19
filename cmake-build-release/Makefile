@@ -128,6 +128,30 @@ projekt/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt.dir\build.make CMakeFiles/projekt.dir/build
 .PHONY : projekt/fast
 
+Arkanoid.obj: Arkanoid.cpp.obj
+.PHONY : Arkanoid.obj
+
+# target to build an object file
+Arkanoid.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt.dir\build.make CMakeFiles/projekt.dir/Arkanoid.cpp.obj
+.PHONY : Arkanoid.cpp.obj
+
+Arkanoid.i: Arkanoid.cpp.i
+.PHONY : Arkanoid.i
+
+# target to preprocess a source file
+Arkanoid.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt.dir\build.make CMakeFiles/projekt.dir/Arkanoid.cpp.i
+.PHONY : Arkanoid.cpp.i
+
+Arkanoid.s: Arkanoid.cpp.s
+.PHONY : Arkanoid.s
+
+# target to generate assembly for a file
+Arkanoid.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt.dir\build.make CMakeFiles/projekt.dir/Arkanoid.cpp.s
+.PHONY : Arkanoid.cpp.s
+
 Ball.obj: Ball.cpp.obj
 .PHONY : Ball.obj
 
@@ -257,6 +281,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... projekt
+	@echo ... Arkanoid.obj
+	@echo ... Arkanoid.i
+	@echo ... Arkanoid.s
 	@echo ... Ball.obj
 	@echo ... Ball.i
 	@echo ... Ball.s
