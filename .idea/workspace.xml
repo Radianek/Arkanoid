@@ -20,14 +20,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="666b959d-4b4e-43c0-8fb5-cd221a2a99fd" name="Changes" comment="SFML działa">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/main.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/projekt.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/projekt.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+    <list default="true" id="666b959d-4b4e-43c0-8fb5-cd221a2a99fd" name="Changes" comment="Etap 3&#10;-Stworzona hierarchia klas zgodnie z diagramem&#10;-brak implementacji klas&#10;-Program się uruchamia&#10;-pojawia się puste okno">
+      <change beforePath="$PROJECT_DIR$/Jargilo_uzycia.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +83,11 @@
   }
 }</component>
   <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="projekt" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="projekt" TARGET_NAME="projekt" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="projekt" RUN_TARGET_NAME="projekt">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -115,7 +114,7 @@
       <workItem from="1684326260227" duration="210000" />
       <workItem from="1684326486403" duration="86000" />
       <workItem from="1684326872136" duration="410000" />
-      <workItem from="1684490309684" duration="1353000" />
+      <workItem from="1684490309684" duration="3353000" />
     </task>
     <task id="LOCAL-00001" summary="piewszy commit">
       <created>1683474850117</created>
@@ -173,7 +172,35 @@
       <option name="project" value="LOCAL" />
       <updated>1684327255485</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Czarne okno">
+      <created>1684491722060</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1684491722060</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Tworzenie piłki">
+      <created>1684492108745</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1684492108745</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Tworzenie piłki">
+      <created>1684492116031</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1684492116031</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Etap 3&#10;-Stworzona hierarchia klas zgodnie z diagramem&#10;-brak implementacji klas&#10;-Program się uruchamia&#10;-pojawia się puste okno">
+      <created>1684493409959</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1684493409959</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,6 +220,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="piewszy commit" />
     <MESSAGE value="SFML działa" />
-    <option name="LAST_COMMIT_MESSAGE" value="SFML działa" />
+    <MESSAGE value="Czarne okno" />
+    <MESSAGE value="Tworzenie piłki" />
+    <MESSAGE value="Etap 3&#10;-Stworzona hierarchia klas zgodnie z diagramem&#10;-brak implementacji klas&#10;-Program się uruchamia&#10;-pojawia się puste okno" />
+    <option name="LAST_COMMIT_MESSAGE" value="Etap 3&#10;-Stworzona hierarchia klas zgodnie z diagramem&#10;-brak implementacji klas&#10;-Program się uruchamia&#10;-pojawia się puste okno" />
   </component>
 </project>
