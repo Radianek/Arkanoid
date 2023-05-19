@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/projekt.dir/Ball.cpp.obj"
+  "CMakeFiles/projekt.dir/Ball.cpp.obj.d"
   "CMakeFiles/projekt.dir/main.cpp.obj"
   "CMakeFiles/projekt.dir/main.cpp.obj.d"
   "libprojekt.dll.a"

@@ -6,7 +6,7 @@ using namespace sf;
 
 int main()
 {
-    RenderWindow window(sf::VideoMode(640, 480), "SFML Application");
+    RenderWindow window(sf::VideoMode(640, 480), "Arcanoid");
     window.setFramerateLimit(60);
     Event event;
 
@@ -14,6 +14,14 @@ int main()
     {
         window.clear( Color::Black);
         window.pollEvent(event);
+
+        if(event.type == Event::Closed)
+        {
+            window.close();
+            break;
+        }
+
+
         window.display();
     }
 

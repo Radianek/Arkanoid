@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/adm/CLionProjects/Arkanoid/Ball.cpp">
+			<Option target="projekt"/>
+		</Unit>
+		<Unit filename="C:/Users/adm/CLionProjects/Arkanoid/Ball.h">
+			<Option target="projekt"/>
+		</Unit>
 		<Unit filename="C:/Users/adm/CLionProjects/Arkanoid/main.cpp">
 			<Option target="projekt"/>
 		</Unit>

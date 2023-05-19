@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "C:/Users/adm/CLionProjects/Arkanoid/Ball.cpp" "CMakeFiles/projekt.dir/Ball.cpp.obj" "gcc" "CMakeFiles/projekt.dir/Ball.cpp.obj.d"
   "C:/Users/adm/CLionProjects/Arkanoid/main.cpp" "CMakeFiles/projekt.dir/main.cpp.obj" "gcc" "CMakeFiles/projekt.dir/main.cpp.obj.d"
   )
 

@@ -128,6 +128,30 @@ projekt/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt.dir\build.make CMakeFiles/projekt.dir/build
 .PHONY : projekt/fast
 
+Ball.obj: Ball.cpp.obj
+.PHONY : Ball.obj
+
+# target to build an object file
+Ball.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt.dir\build.make CMakeFiles/projekt.dir/Ball.cpp.obj
+.PHONY : Ball.cpp.obj
+
+Ball.i: Ball.cpp.i
+.PHONY : Ball.i
+
+# target to preprocess a source file
+Ball.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt.dir\build.make CMakeFiles/projekt.dir/Ball.cpp.i
+.PHONY : Ball.cpp.i
+
+Ball.s: Ball.cpp.s
+.PHONY : Ball.s
+
+# target to generate assembly for a file
+Ball.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt.dir\build.make CMakeFiles/projekt.dir/Ball.cpp.s
+.PHONY : Ball.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -161,6 +185,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... projekt
+	@echo ... Ball.obj
+	@echo ... Ball.i
+	@echo ... Ball.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
