@@ -242,5 +242,26 @@ CMakeFiles/projekt.dir/main.cpp.obj: \
  C:/SFML/include/SFML/Graphics/Sprite.hpp \
  C:/SFML/include/SFML/Graphics/Text.hpp \
  C:/SFML/include/SFML/Graphics/VertexBuffer.hpp \
+ C:/SFML/include/SFML/Audio.hpp \
+ C:/SFML/include/SFML/Audio/InputSoundFile.hpp \
+ C:/SFML/include/SFML/Audio/Export.hpp \
+ C:/SFML/include/SFML/Audio/Listener.hpp \
+ C:/SFML/include/SFML/Audio/Music.hpp \
+ C:/SFML/include/SFML/Audio/SoundStream.hpp \
+ C:/SFML/include/SFML/Audio/SoundSource.hpp \
+ C:/SFML/include/SFML/Audio/AlResource.hpp \
+ C:/SFML/include/SFML/Audio/OutputSoundFile.hpp \
+ C:/SFML/include/SFML/Audio/Sound.hpp \
+ C:/SFML/include/SFML/Audio/SoundBuffer.hpp \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/set \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_set.h \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_multiset.h \
+ C:/SFML/include/SFML/Audio/SoundBufferRecorder.hpp \
+ C:/SFML/include/SFML/Audio/SoundRecorder.hpp \
+ C:/SFML/include/SFML/Audio/SoundFileFactory.hpp \
+ C:/SFML/include/SFML/Audio/SoundFileFactory.inl \
+ C:/SFML/include/SFML/Audio/SoundFileReader.hpp \
+ C:/SFML/include/SFML/Audio/SoundFileWriter.hpp \
  C:\Users\adm\CLionProjects\Arkanoid\Ball.h \
- C:\Users\adm\CLionProjects\Arkanoid\Paddle.h
+ C:\Users\adm\CLionProjects\Arkanoid\Paddle.h \
+ C:\Users\adm\CLionProjects\Arkanoid\Menu.h

@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/projekt.dir/Block.cpp.obj.d"
   "CMakeFiles/projekt.dir/Controls.cpp.obj"
   "CMakeFiles/projekt.dir/Controls.cpp.obj.d"
+  "CMakeFiles/projekt.dir/Menu.cpp.obj"
+  "CMakeFiles/projekt.dir/Menu.cpp.obj.d"
   "CMakeFiles/projekt.dir/Paddle.cpp.obj"
   "CMakeFiles/projekt.dir/Paddle.cpp.obj.d"
   "CMakeFiles/projekt.dir/main.cpp.obj"

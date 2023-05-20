@@ -26,7 +26,8 @@ void Paddle::update() {
     if(Keyboard::isKeyPressed(sf::Keyboard::Key::Left)&& this->left() >0){
         velocity.x= -paddle_velocity;
     }
-    else if(Keyboard::isKeyPressed(sf::Keyboard::Key::Right)&& this->right() <1000) {
+    else if(Keyboard::isKeyPressed(sf::Keyboard::Key::Right)&& this->right() <1650) //ZMIENIC TO !!!! jakos przekzazc szerokosc okna aplikacji
+    {
      velocity.x= paddle_velocity;
     }
     else{
