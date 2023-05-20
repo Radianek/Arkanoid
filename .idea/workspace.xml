@@ -20,9 +20,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="666b959d-4b4e-43c0-8fb5-cd221a2a99fd" name="Changes" comment="-dodanie bloków">
+    <list default="true" id="666b959d-4b4e-43c0-8fb5-cd221a2a99fd" name="Changes" comment="-dodanie instrukcji">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Menu.h" beforeDir="false" afterPath="$PROJECT_DIR$/Menu.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Menu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Menu.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/main.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/objects.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-release/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/Testing/Temporary/LastTest.log" afterDir="false" />
@@ -122,7 +122,7 @@
       <workItem from="1684572172458" duration="113000" />
       <workItem from="1684577108293" duration="2238000" />
       <workItem from="1684582545940" duration="6890000" />
-      <workItem from="1684589975561" duration="5087000" />
+      <workItem from="1684589975561" duration="9887000" />
     </task>
     <task id="LOCAL-00001" summary="piewszy commit">
       <created>1683474850117</created>
@@ -250,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684588751450</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="-dodanie instrukcji">
+      <created>1684597537242</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1684597537242</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,6 +285,7 @@
     <MESSAGE value="-dodanie platformy&#10;-dodanie przechwytywania klawiszy&#10;-brak kolizji pomiędzy piłką a platformą" />
     <MESSAGE value="-dodane menu gry&#10;-brak kolizji pomiędzy piłką a platformą" />
     <MESSAGE value="-dodanie bloków" />
-    <option name="LAST_COMMIT_MESSAGE" value="-dodanie bloków" />
+    <MESSAGE value="-dodanie instrukcji" />
+    <option name="LAST_COMMIT_MESSAGE" value="-dodanie instrukcji" />
   </component>
 </project>

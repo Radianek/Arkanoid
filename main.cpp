@@ -30,7 +30,7 @@ int main()
     Texture mainmenu_photo;
     Texture instruction_photo;
     instruction_photo.loadFromFile("instrukcja.png");
-    mainmenu_photo.loadFromFile("obraz.jpg");
+    mainmenu_photo.loadFromFile("obraz.png");
     Sprite photo;
     photo.setTexture(mainmenu_photo);
     window.setFramerateLimit(60);
@@ -154,7 +154,7 @@ int main()
                     // Rysowanie przycisku "Back"
                     RectangleShape backButton(Vector2f(100.f, 40.f));
                     backButton.setFillColor(Color::Red);
-                    backButton.setPosition(posX/2 + instructionSprite.getGlobalBounds().width - backButton.getSize().x - 10.f, posY + instructionSprite.getGlobalBounds().height - backButton.getSize().y - 200.f);
+                    backButton.setPosition(posX/5 + instructionSprite.getGlobalBounds().width - 7*backButton.getSize().x, posY + instructionSprite.getGlobalBounds().height - backButton.getSize().y - 200.f);
                     window.draw(backButton);
 
                     // Tworzenie tekstu "Back"
@@ -167,7 +167,7 @@ int main()
 
                     Text backText("Back", font, 20); // Tekst "Back" z czcionką i rozmiarem 20
                     backText.setFillColor(Color::White);
-                    backText.setPosition(backButton.getPosition().x + backButton.getSize().x / 2.f - backText.getGlobalBounds().width / 2.f, backButton.getPosition().y + backButton.getSize().y / 2.f - backText.getGlobalBounds().height / 2.f);
+                    backText.setPosition(backButton.getPosition().x + backButton.getSize().x / 2.f - backText.getGlobalBounds().width / 2.f, backButton.getPosition().y + backButton.getSize().y / 3.f - backText.getGlobalBounds().height / 2.f);
                     window.draw(backText);
 
                     window.display();
