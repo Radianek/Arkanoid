@@ -28,6 +28,8 @@ int main()
     RenderWindow window (VideoMode(1650, 1050),"Arcanoid");
     Menu menu(1920, 1080);
     Texture mainmenu_photo;
+    Texture instruction_photo;
+    instruction_photo.loadFromFile("instrukcja.png");
     mainmenu_photo.loadFromFile("obraz.jpg");
     Sprite photo;
     photo.setTexture(mainmenu_photo);
@@ -64,9 +66,6 @@ int main()
                         {
                             menu.MoveUp();
                         }
-                    }
-                    if(event.type==Event::KeyPressed)
-                    {
                         if(event.key.code == Keyboard::Down)
                         {
                             menu.MoveDown();
@@ -79,7 +78,7 @@ int main()
                             }
                             if(menu.pressed()==1)
                             {
-                                menu_options=1;
+                                menu_options=2;
                             }
                             if(menu.pressed()==2)
                             {
@@ -102,7 +101,7 @@ int main()
                 window.close();
                 break;
             }
-            if(menu_options == 0)
+            else if(menu_options == 0)
             {
                 while(window.isOpen())
                 {
@@ -127,6 +126,69 @@ int main()
                         window.draw(block.getShape());
                     }
                     window.display();
+                }
+            }
+            else if (menu_options == 2)
+            {
+                while (window.isOpen())
+                {
+                    window.clear(Color::Black);
+                    window.pollEvent(event);
+
+                    if (event.type == Event::Closed)
+                    {
+                        window.close();
+                        break;
+                    }
+
+                    // Rysowanie obrazka instrukcji
+                    Sprite instructionSprite(instruction_photo);
+
+                    // Ustawienie pozycji na środku okna
+                    float posX = (window.getSize().x - instructionSprite.getGlobalBounds().width) / 2.f;
+                    float posY = (window.getSize().y - instructionSprite.getGlobalBounds().height) / 2.f;
+                    instructionSprite.setPosition(posX, posY);
+
+                    window.draw(instructionSprite);
+
+                    // Rysowanie przycisku "Back"
+                    RectangleShape backButton(Vector2f(100.f, 40.f));
+                    backButton.setFillColor(Color::Red);
+                    backButton.setPosition(posX/2 + instructionSprite.getGlobalBounds().width - backButton.getSize().x - 10.f, posY + instructionSprite.getGlobalBounds().height - backButton.getSize().y - 200.f);
+                    window.draw(backButton);
+
+                    // Tworzenie tekstu "Back"
+                    Font font;
+                    if (!font.loadFromFile("Bambuchinnox.ttf")) // Ścieżka do pliku czcionki
+                    {
+                        // Obsługa błędu wczytywania czcionki
+                        // Możesz użyć innej czcionki lub zwrócić komunikat o błędzie
+                    }
+
+                    Text backText("Back", font, 20); // Tekst "Back" z czcionką i rozmiarem 20
+                    backText.setFillColor(Color::White);
+                    backText.setPosition(backButton.getPosition().x + backButton.getSize().x / 2.f - backText.getGlobalBounds().width / 2.f, backButton.getPosition().y + backButton.getSize().y / 2.f - backText.getGlobalBounds().height / 2.f);
+                    window.draw(backText);
+
+                    window.display();
+
+                    if (event.type == Event::KeyPressed && event.key.code == Keyboard::Escape)
+                    {
+                        menu_options = 1; // Przejście do menu głównego po naciśnięciu klawisza Escape
+                        break;
+                    }
+
+                    if (event.type == Event::MouseButtonReleased && event.mouseButton.button == Mouse::Left)
+                    {
+                        // Sprawdzenie, czy kliknięcie myszką nastąpiło na przycisku "Back"
+                        Vector2f mousePosition = window.mapPixelToCoords(Vector2i(event.mouseButton.x, event.mouseButton.y));
+
+                        if (backButton.getGlobalBounds().contains(mousePosition))
+                        {
+                            menu_options = 1; // Przejście do menu głównego po kliknięciu przycisku "Back"
+                            break;
+                        }
+                    }
                 }
             }
         }
