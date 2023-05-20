@@ -22,7 +22,6 @@
   <component name="ChangeListManager">
     <list default="true" id="666b959d-4b4e-43c0-8fb5-cd221a2a99fd" name="Changes" comment="-dodanie instrukcji">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Menu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Menu.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/main.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/objects.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-release/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/Testing/Temporary/LastTest.log" afterDir="false" />
@@ -122,7 +121,8 @@
       <workItem from="1684572172458" duration="113000" />
       <workItem from="1684577108293" duration="2238000" />
       <workItem from="1684582545940" duration="6890000" />
-      <workItem from="1684589975561" duration="9887000" />
+      <workItem from="1684589975561" duration="10162000" />
+      <workItem from="1684612246812" duration="310000" />
     </task>
     <task id="LOCAL-00001" summary="piewszy commit">
       <created>1683474850117</created>
@@ -257,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684597537242</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="-dodanie instrukcji">
+      <created>1684605624387</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1684605624387</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -57,7 +57,7 @@ int main()
                     if(event.type==Event::Closed)
                     {
                         window.close();
-                        break;
+                        return 0;
                     }
 
                     if(event.type==Event::KeyPressed)
@@ -111,7 +111,7 @@ int main()
                     if(event.type == Event::Closed)
                     {
                         window.close();
-                        break;
+                        return 0;
                     }
                     ball.update();
                     paddle.update();
@@ -138,7 +138,7 @@ int main()
                     if (event.type == Event::Closed)
                     {
                         window.close();
-                        break;
+                        return 0;
                     }
 
                     // Rysowanie obrazka instrukcji
