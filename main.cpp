@@ -1,9 +1,9 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
-#include <SFML/Audio.hpp>
 #include "Ball.h"
 #include "Paddle.h"
 #include "Menu.h"
+#include "Block.h"
 
 using namespace std;
 using namespace sf;
@@ -23,7 +23,6 @@ int main()
      ***************************************************************
      */
 
-
     Ball ball(500, 500);
     Paddle paddle(950, 950);
     RenderWindow window (VideoMode(1650, 1050),"Arcanoid");
@@ -34,6 +33,16 @@ int main()
     photo.setTexture(mainmenu_photo);
     window.setFramerateLimit(60);
     Event event;
+    unsigned blocks_x {15}, blocks_y{4}, block_width{100}, block_height{60};
+
+    vector<Block> blocks;
+    for(int i = 0; i< blocks_y;i++)
+    {
+        for(int j= 0; j < blocks_x; j++)
+        {
+            blocks.emplace_back((j+1)*(block_width+5),(i+1)*(block_height+5), block_width, block_height);
+        }
+    }
 
     while(true)
     {
@@ -45,6 +54,7 @@ int main()
                 {
                     if(event.type==Event::Closed)
                     {
+                        window.close();
                         break;
                     }
 
@@ -106,10 +116,16 @@ int main()
                     }
                     ball.update();
                     paddle.update();
+                    ball.update();
+                    paddle.update();
 
                     window.draw(ball.getShape());
                     window.draw(paddle.getShape());
 
+                    for(auto& block:blocks)
+                    {
+                        window.draw(block.getShape());
+                    }
                     window.display();
                 }
             }

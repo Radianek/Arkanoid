@@ -41,7 +41,6 @@ void Ball::update() {
     {
         velocity.y = -ball_velocity;
     }
-
 }
 
 float Ball::left() {

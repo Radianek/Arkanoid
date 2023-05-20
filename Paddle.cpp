@@ -6,11 +6,11 @@
 
 Paddle::Paddle(float pos_X, float pos_Y) {
     shape.setPosition(pos_X, pos_Y);
-    shape.setSize(Vector2f(this->paddle_width,this->paddle_high));
+    shape.setSize(Vector2f(this->paddle_width,this->paddle_height));
     shape.setFillColor( Color::Green);
 
     //ustawienie położenie punktu odniesienia
-    shape.setOrigin(this->paddle_width/2.f, this->paddle_high);
+    shape.setOrigin(this->paddle_width/2.f, this->paddle_height/2.f);
 }
 
 const RectangleShape& Paddle::getShape() const {
