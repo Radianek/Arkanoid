@@ -9,7 +9,7 @@ Block::Block(float pos_X, float pos_Y, float width, float height)
 {
     shape.setPosition(pos_X, pos_Y);
     shape.setSize(Vector2f(width,height));
-    shape.setFillColor( Color::Blue);
+    shape.setFillColor(Color{184, 3, 255});
     shape.setOrigin(width/2.f, height/2.f);
 }
 
