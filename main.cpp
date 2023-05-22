@@ -66,11 +66,11 @@ int main()
                         {
                             menu.MoveUp();
                         }
-                        if(event.key.code == Keyboard::Down)
+                        else if(event.key.code == Keyboard::Down)
                         {
                             menu.MoveDown();
                         }
-                        if(event.key.code==Keyboard::Return)
+                        else if(event.key.code==Keyboard::Return)
                         {
                             if(menu.pressed()==0)
                             {
@@ -86,6 +86,8 @@ int main()
                             }
                         }
                     }
+
+
                 }
                 window.clear();
                 if(menu_options != 1)
