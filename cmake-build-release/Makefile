@@ -200,30 +200,6 @@ Block.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt.dir\build.make CMakeFiles/projekt.dir/Block.cpp.s
 .PHONY : Block.cpp.s
 
-Controls.obj: Controls.cpp.obj
-.PHONY : Controls.obj
-
-# target to build an object file
-Controls.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt.dir\build.make CMakeFiles/projekt.dir/Controls.cpp.obj
-.PHONY : Controls.cpp.obj
-
-Controls.i: Controls.cpp.i
-.PHONY : Controls.i
-
-# target to preprocess a source file
-Controls.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt.dir\build.make CMakeFiles/projekt.dir/Controls.cpp.i
-.PHONY : Controls.cpp.i
-
-Controls.s: Controls.cpp.s
-.PHONY : Controls.s
-
-# target to generate assembly for a file
-Controls.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt.dir\build.make CMakeFiles/projekt.dir/Controls.cpp.s
-.PHONY : Controls.cpp.s
-
 Menu.obj: Menu.cpp.obj
 .PHONY : Menu.obj
 
@@ -314,9 +290,6 @@ help:
 	@echo ... Block.obj
 	@echo ... Block.i
 	@echo ... Block.s
-	@echo ... Controls.obj
-	@echo ... Controls.i
-	@echo ... Controls.s
 	@echo ... Menu.obj
 	@echo ... Menu.i
 	@echo ... Menu.s

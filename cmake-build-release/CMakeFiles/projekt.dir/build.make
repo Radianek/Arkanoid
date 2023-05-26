@@ -128,26 +128,11 @@ CMakeFiles/projekt.dir/Block.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projekt.dir/Block.cpp.s"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\adm\CLionProjects\Arkanoid\Block.cpp -o CMakeFiles\projekt.dir\Block.cpp.s
 
-CMakeFiles/projekt.dir/Controls.cpp.obj: CMakeFiles/projekt.dir/flags.make
-CMakeFiles/projekt.dir/Controls.cpp.obj: CMakeFiles/projekt.dir/includes_CXX.rsp
-CMakeFiles/projekt.dir/Controls.cpp.obj: C:/Users/adm/CLionProjects/Arkanoid/Controls.cpp
-CMakeFiles/projekt.dir/Controls.cpp.obj: CMakeFiles/projekt.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\adm\CLionProjects\Arkanoid\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/projekt.dir/Controls.cpp.obj"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/projekt.dir/Controls.cpp.obj -MF CMakeFiles\projekt.dir\Controls.cpp.obj.d -o CMakeFiles\projekt.dir\Controls.cpp.obj -c C:\Users\adm\CLionProjects\Arkanoid\Controls.cpp
-
-CMakeFiles/projekt.dir/Controls.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projekt.dir/Controls.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\adm\CLionProjects\Arkanoid\Controls.cpp > CMakeFiles\projekt.dir\Controls.cpp.i
-
-CMakeFiles/projekt.dir/Controls.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projekt.dir/Controls.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\adm\CLionProjects\Arkanoid\Controls.cpp -o CMakeFiles\projekt.dir\Controls.cpp.s
-
 CMakeFiles/projekt.dir/Arkanoid.cpp.obj: CMakeFiles/projekt.dir/flags.make
 CMakeFiles/projekt.dir/Arkanoid.cpp.obj: CMakeFiles/projekt.dir/includes_CXX.rsp
 CMakeFiles/projekt.dir/Arkanoid.cpp.obj: C:/Users/adm/CLionProjects/Arkanoid/Arkanoid.cpp
 CMakeFiles/projekt.dir/Arkanoid.cpp.obj: CMakeFiles/projekt.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\adm\CLionProjects\Arkanoid\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/projekt.dir/Arkanoid.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\adm\CLionProjects\Arkanoid\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/projekt.dir/Arkanoid.cpp.obj"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/projekt.dir/Arkanoid.cpp.obj -MF CMakeFiles\projekt.dir\Arkanoid.cpp.obj.d -o CMakeFiles\projekt.dir\Arkanoid.cpp.obj -c C:\Users\adm\CLionProjects\Arkanoid\Arkanoid.cpp
 
 CMakeFiles/projekt.dir/Arkanoid.cpp.i: cmake_force
@@ -162,7 +147,7 @@ CMakeFiles/projekt.dir/Menu.cpp.obj: CMakeFiles/projekt.dir/flags.make
 CMakeFiles/projekt.dir/Menu.cpp.obj: CMakeFiles/projekt.dir/includes_CXX.rsp
 CMakeFiles/projekt.dir/Menu.cpp.obj: C:/Users/adm/CLionProjects/Arkanoid/Menu.cpp
 CMakeFiles/projekt.dir/Menu.cpp.obj: CMakeFiles/projekt.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\adm\CLionProjects\Arkanoid\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/projekt.dir/Menu.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\adm\CLionProjects\Arkanoid\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/projekt.dir/Menu.cpp.obj"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/projekt.dir/Menu.cpp.obj -MF CMakeFiles\projekt.dir\Menu.cpp.obj.d -o CMakeFiles\projekt.dir\Menu.cpp.obj -c C:\Users\adm\CLionProjects\Arkanoid\Menu.cpp
 
 CMakeFiles/projekt.dir/Menu.cpp.i: cmake_force
@@ -179,7 +164,6 @@ projekt_OBJECTS = \
 "CMakeFiles/projekt.dir/Ball.cpp.obj" \
 "CMakeFiles/projekt.dir/Paddle.cpp.obj" \
 "CMakeFiles/projekt.dir/Block.cpp.obj" \
-"CMakeFiles/projekt.dir/Controls.cpp.obj" \
 "CMakeFiles/projekt.dir/Arkanoid.cpp.obj" \
 "CMakeFiles/projekt.dir/Menu.cpp.obj"
 
@@ -190,7 +174,6 @@ projekt.exe: CMakeFiles/projekt.dir/main.cpp.obj
 projekt.exe: CMakeFiles/projekt.dir/Ball.cpp.obj
 projekt.exe: CMakeFiles/projekt.dir/Paddle.cpp.obj
 projekt.exe: CMakeFiles/projekt.dir/Block.cpp.obj
-projekt.exe: CMakeFiles/projekt.dir/Controls.cpp.obj
 projekt.exe: CMakeFiles/projekt.dir/Arkanoid.cpp.obj
 projekt.exe: CMakeFiles/projekt.dir/Menu.cpp.obj
 projekt.exe: CMakeFiles/projekt.dir/build.make
@@ -202,7 +185,7 @@ projekt.exe: C:/SFML/lib/libsfml-audio.a
 projekt.exe: CMakeFiles/projekt.dir/linklibs.rsp
 projekt.exe: CMakeFiles/projekt.dir/objects1.rsp
 projekt.exe: CMakeFiles/projekt.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\adm\CLionProjects\Arkanoid\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable projekt.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\adm\CLionProjects\Arkanoid\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable projekt.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\projekt.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

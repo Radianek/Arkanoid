@@ -11,6 +11,8 @@ using namespace sf;
 
 int main()
 {
+
+
     int menu_options =1;
     /***************************************************************
      *          menu_options           *          Function         *
@@ -163,8 +165,7 @@ int main()
                     Font font;
                     if (!font.loadFromFile("Bambuchinnox.ttf")) // Ścieżka do pliku czcionki
                     {
-                        // Obsługa błędu wczytywania czcionki
-                        // Możesz użyć innej czcionki lub zwrócić komunikat o błędzie
+                        return -1;
                     }
 
                     Text backText("Back", font, 20); // Tekst "Back" z czcionką i rozmiarem 20

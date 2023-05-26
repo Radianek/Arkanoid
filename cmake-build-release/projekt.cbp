@@ -100,12 +100,6 @@
 		<Unit filename="C:/Users/adm/CLionProjects/Arkanoid/Block.h">
 			<Option target="projekt"/>
 		</Unit>
-		<Unit filename="C:/Users/adm/CLionProjects/Arkanoid/Controls.cpp">
-			<Option target="projekt"/>
-		</Unit>
-		<Unit filename="C:/Users/adm/CLionProjects/Arkanoid/Controls.h">
-			<Option target="projekt"/>
-		</Unit>
 		<Unit filename="C:/Users/adm/CLionProjects/Arkanoid/Menu.cpp">
 			<Option target="projekt"/>
 		</Unit>
