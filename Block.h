@@ -20,12 +20,18 @@ public:
     float right();
     float top();
     float bottom();
+
     bool is_destroyed();
     void destroy();
+    void restore();
+    void removed_blocks();
+    bool destroyed{false};
+    int points;
+
 
 private:
     RectangleShape shape;
-    bool destroyed{0};
+
     void draw(RenderTarget& target, RenderStates state)const;
 };
 

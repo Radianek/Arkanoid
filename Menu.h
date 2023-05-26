@@ -14,12 +14,18 @@ class Menu
 {
 public:
     Text mainmenu[3];
+    Text end_menu[3];
     Menu(float width, float  height);
     void draw(RenderWindow& window);
+    void draw_end_menu(RenderWindow& window);
     void MoveUp();
     void MoveDown();
+    void MoveLeft();
+    void MoveRight();
     void setSelected(int n);
+    void all_on_white();
     int pressed()
+
     {
         return selected;
     }

@@ -1,5 +1,5 @@
 CMakeFiles/projekt.dir/main.cpp.obj: \
- C:\Users\adm\CLionProjects\Arkanoid\main.cpp \
+ C:\Users\wawru\CLionProjects\Arkanoid\main.cpp \
  C:/SFML/include/SFML/Graphics.hpp C:/SFML/include/SFML/Window.hpp \
  C:/SFML/include/SFML/System.hpp C:/SFML/include/SFML/Config.hpp \
  C:/SFML/include/SFML/System/Clock.hpp \
@@ -242,7 +242,7 @@ CMakeFiles/projekt.dir/main.cpp.obj: \
  C:/SFML/include/SFML/Graphics/Sprite.hpp \
  C:/SFML/include/SFML/Graphics/Text.hpp \
  C:/SFML/include/SFML/Graphics/VertexBuffer.hpp \
- C:\Users\adm\CLionProjects\Arkanoid\Ball.h \
- C:\Users\adm\CLionProjects\Arkanoid\Paddle.h \
- C:\Users\adm\CLionProjects\Arkanoid\Menu.h \
- C:\Users\adm\CLionProjects\Arkanoid\Block.h
+ C:\Users\wawru\CLionProjects\Arkanoid\Ball.h \
+ C:\Users\wawru\CLionProjects\Arkanoid\Paddle.h \
+ C:\Users\wawru\CLionProjects\Arkanoid\Menu.h \
+ C:\Users\wawru\CLionProjects\Arkanoid\Block.h

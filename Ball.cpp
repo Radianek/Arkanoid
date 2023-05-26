@@ -9,7 +9,6 @@ Ball::Ball(float pos_X, float pos_Y) {
     shape.setPosition(pos_X, pos_Y);
     shape.setRadius(this->ball_radius);
     shape.setFillColor( Color::Red);
-
     //ustawienie położenie punktu odniesienia, czyli wskazanie na środek piłki
     shape.setOrigin(this->ball_radius, this->ball_radius);
 }
@@ -37,7 +36,7 @@ void Ball::update() {
     {
         velocity.y =ball_velocity;
     }
-    else if(this->bottom()>999-2*ball_radius) //ZMIENIC TO !!!! jakos przekzazc szerokosc okna aplikacji
+    else if(this->bottom()>1070-2*ball_radius) //ZMIENIC TO !!!! jakos przekzazc szerokosc okna aplikacji
     {
         velocity.y = -ball_velocity;
     }
@@ -50,8 +49,70 @@ float Ball::right() {
     return shape.getPosition().x + shape.getRadius();
 }
 float Ball::top() {
-    return shape.getPosition().y + shape.getRadius();
+    return shape.getPosition().y - shape.getRadius();
 }
 float Ball::bottom() {
-    return shape.getPosition().y - shape.getRadius();
+    return shape.getPosition().y + shape.getRadius();
+}
+
+
+void Ball::moveDown()
+{
+    this->velocity.y = ball_velocity;
+}
+void Ball::moveUp()
+{
+    this->velocity.y = -ball_velocity;
+}
+void Ball::moveRight()
+{
+    this->velocity.x = ball_velocity;
+}
+void Ball::moveLeft()
+{
+    this->velocity.x = -ball_velocity;
+}
+void Ball::under_paddle()
+{
+    this->shape.setFillColor( Color::Black);
+    this->velocity.x = 0;
+    this->velocity.y = 0;
+
+
+}
+
+void Ball::stop_game()
+{
+    if(Keyboard::isKeyPressed(Keyboard::P))
+    {
+        static bool ball_stopped = false;
+        is_stopped = true;
+        if(!ball_stopped)
+        {
+        ball_velocity_helper_x = this->velocity.x;
+        ball_velocity_helper_y = this->velocity.y;
+        this->velocity.x = 0;
+        this->velocity.y = 0;
+        ball_stopped=true;
+        }
+        else
+        {
+            this->velocity.x = ball_velocity_helper_x;
+            this->velocity.y = ball_velocity_helper_y;
+            ball_stopped = false;
+            is_stopped = false;
+
+        }
+    }
+}
+Vector2f Ball::getPosition()
+{
+   return shape.getPosition();
+}
+void Ball::reset_ball()
+{
+    shape.setFillColor( Color::Red);
+    shape.setPosition(825, 525);
+    this->velocity.x = 0.0f;
+    this->velocity.y = 5.0f;
 }

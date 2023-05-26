@@ -1,6 +1,6 @@
 CMakeFiles/projekt.dir/Paddle.cpp.obj: \
- C:\Users\adm\CLionProjects\Arkanoid\Paddle.cpp \
- C:\Users\adm\CLionProjects\Arkanoid\Paddle.h \
+ C:\Users\wawru\CLionProjects\Arkanoid\Paddle.cpp \
+ C:\Users\wawru\CLionProjects\Arkanoid\Paddle.h \
  C:/SFML/include/SFML/Graphics.hpp C:/SFML/include/SFML/Window.hpp \
  C:/SFML/include/SFML/System.hpp C:/SFML/include/SFML/Config.hpp \
  C:/SFML/include/SFML/System/Clock.hpp \

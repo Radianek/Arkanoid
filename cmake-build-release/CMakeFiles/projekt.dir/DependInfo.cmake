@@ -8,13 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/adm/CLionProjects/Arkanoid/Arkanoid.cpp" "CMakeFiles/projekt.dir/Arkanoid.cpp.obj" "gcc" "CMakeFiles/projekt.dir/Arkanoid.cpp.obj.d"
-  "C:/Users/adm/CLionProjects/Arkanoid/Ball.cpp" "CMakeFiles/projekt.dir/Ball.cpp.obj" "gcc" "CMakeFiles/projekt.dir/Ball.cpp.obj.d"
-  "C:/Users/adm/CLionProjects/Arkanoid/Block.cpp" "CMakeFiles/projekt.dir/Block.cpp.obj" "gcc" "CMakeFiles/projekt.dir/Block.cpp.obj.d"
-  "C:/Users/adm/CLionProjects/Arkanoid/Controls.cpp" "CMakeFiles/projekt.dir/Controls.cpp.obj" "gcc" "CMakeFiles/projekt.dir/Controls.cpp.obj.d"
-  "C:/Users/adm/CLionProjects/Arkanoid/Menu.cpp" "CMakeFiles/projekt.dir/Menu.cpp.obj" "gcc" "CMakeFiles/projekt.dir/Menu.cpp.obj.d"
-  "C:/Users/adm/CLionProjects/Arkanoid/Paddle.cpp" "CMakeFiles/projekt.dir/Paddle.cpp.obj" "gcc" "CMakeFiles/projekt.dir/Paddle.cpp.obj.d"
-  "C:/Users/adm/CLionProjects/Arkanoid/main.cpp" "CMakeFiles/projekt.dir/main.cpp.obj" "gcc" "CMakeFiles/projekt.dir/main.cpp.obj.d"
+  "C:/Users/wawru/CLionProjects/Arkanoid/Arkanoid.cpp" "CMakeFiles/projekt.dir/Arkanoid.cpp.obj" "gcc" "CMakeFiles/projekt.dir/Arkanoid.cpp.obj.d"
+  "C:/Users/wawru/CLionProjects/Arkanoid/Ball.cpp" "CMakeFiles/projekt.dir/Ball.cpp.obj" "gcc" "CMakeFiles/projekt.dir/Ball.cpp.obj.d"
+  "C:/Users/wawru/CLionProjects/Arkanoid/Block.cpp" "CMakeFiles/projekt.dir/Block.cpp.obj" "gcc" "CMakeFiles/projekt.dir/Block.cpp.obj.d"
+  "C:/Users/wawru/CLionProjects/Arkanoid/Menu.cpp" "CMakeFiles/projekt.dir/Menu.cpp.obj" "gcc" "CMakeFiles/projekt.dir/Menu.cpp.obj.d"
+  "C:/Users/wawru/CLionProjects/Arkanoid/Paddle.cpp" "CMakeFiles/projekt.dir/Paddle.cpp.obj" "gcc" "CMakeFiles/projekt.dir/Paddle.cpp.obj.d"
+  "C:/Users/wawru/CLionProjects/Arkanoid/main.cpp" "CMakeFiles/projekt.dir/main.cpp.obj" "gcc" "CMakeFiles/projekt.dir/main.cpp.obj.d"
   )
 
 # Targets to which this target links.

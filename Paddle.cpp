@@ -34,6 +34,10 @@ void Paddle::update() {
         velocity.x=0;
     }
 }
+void Paddle::stop_paddle()
+{
+    paddle_velocity = 0;
+}
 
 float Paddle::left() {
     return shape.getPosition().x - shape.getSize().x/2.f;
@@ -42,8 +46,18 @@ float Paddle::right() {
     return shape.getPosition().x + shape.getSize().x/2.f;
 }
 float Paddle::top() {
-    return shape.getPosition().y + shape.getSize().y/2.f;
+    return shape.getPosition().y - shape.getSize().y/2.f;
 }
 float Paddle::bottom() {
-    return shape.getPosition().y - shape.getSize().y/2.f;
+    return shape.getPosition().y + shape.getSize().y/2.f;
+}
+Vector2f Paddle::getPosition()
+{
+    return shape.getPosition();
+}
+void Paddle::reset_paddle()
+{
+    paddle_velocity = 7.0f;
+    shape.setPosition(825, 950);
+
 }
