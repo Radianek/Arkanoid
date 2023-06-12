@@ -55,7 +55,6 @@ float Ball::bottom() {
     return shape.getPosition().y + shape.getRadius();
 }
 
-
 void Ball::moveDown()
 {
     this->velocity.y = ball_velocity;
@@ -77,8 +76,6 @@ void Ball::under_paddle()
     this->shape.setFillColor( Color::Black);
     this->velocity.x = 0;
     this->velocity.y = 0;
-
-
 }
 
 void Ball::stop_game()

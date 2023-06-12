@@ -4,15 +4,14 @@
 #include "Paddle.h"
 #include "Menu.h"
 #include "Block.h"
+#include "explosiveblock.h"
 
-using namespace std;
-using namespace sf;
 
 template <class C1, class C2> bool exist_Collision(C1& A, C2& B)
 {
      return A.right() >= B.left() && A.left() <= B.right()
      && A.bottom() >= B.top() && A.top() <= B.bottom();
-}
+} //declaration function that describe collision
 
 bool collision(Paddle& paddle, Ball& ball)
 {
@@ -34,40 +33,50 @@ bool collision(Paddle& paddle, Ball& ball)
 
 
     return true;
-}
+}//declaration function that describe collision between ball and paddle
 int score = 0;
+
+explosiveblock exblock(500, 500, 100, 60);
+
 bool collision(Block& block, Ball& ball)
 {
+
     if(!exist_Collision(block, ball))
     {
         return false;
     }
-
-    block.destroy();
-    score ++;
-    float overlap_Left { ball.right() - block.left()};
-    float overlap_Right { block.right() - ball.left()};
-    float overlap_Top {ball.bottom() - block.top()};
-    float overlap_Bottom {block.bottom() - ball.top()};
-
-    bool ball_from_left( abs(overlap_Left) < abs(overlap_Right));
-    bool ball_from_top( abs(overlap_Top) < abs(overlap_Bottom));
-
-    float min_overlap_x {ball_from_left ? overlap_Left : overlap_Right};
-    float min_overlap_y {ball_from_top ? overlap_Top : overlap_Bottom};
-
-    if(abs(min_overlap_x) < abs(min_overlap_y))
+    if(!block.destroyed)
     {
-        ball_from_left ? ball.moveLeft() : ball.moveRight();
-    }
-    else
-    {
-        ball_from_top ? ball.moveUp() : ball.moveDown();
-    }
+            if(exist_Collision(exblock, ball))
+            {
+                exblock.destroy();
+                score = score + 50;
+            }
 
+        block.destroy();
+        score ++;
+        float overlap_Left { ball.right() - block.left()};
+        float overlap_Right { block.right() - ball.left()};
+        float overlap_Top {ball.bottom() - block.top()};
+        float overlap_Bottom {block.bottom() - ball.top()};
 
+        bool ball_from_left( std::abs(overlap_Left) < std::abs(overlap_Right));
+        bool ball_from_top( std::abs(overlap_Top) < std::abs(overlap_Bottom));
+
+        float min_overlap_x {ball_from_left ? overlap_Left : overlap_Right};
+        float min_overlap_y {ball_from_top ? overlap_Top : overlap_Bottom};
+
+        if(std::abs(min_overlap_x) < std::abs(min_overlap_y))
+        {
+            ball_from_left ? ball.moveLeft() : ball.moveRight();
+        }
+        else
+        {
+            ball_from_top ? ball.moveUp() : ball.moveDown();
+        }
+    }
     return true;
-}
+}   //declaration function that describe collision between ball and blocks
 
 
 int main()
@@ -95,22 +104,32 @@ int main()
     instruction_photo.loadFromFile("instrukcja.png");
     mainmenu_photo.loadFromFile("obraz.png");
     Sprite photo;
-    Text endgame;
     photo.setTexture(mainmenu_photo);
     window.setFramerateLimit(60);
     Event event;
     unsigned blocks_x {15}, blocks_y{4}, block_width{100}, block_height{60};
-
-    vector<Block> blocks;
+    std::vector<Block> blocks;
+    exblock.draw_number();
     for(int i = 0; i< blocks_y;i++)
     {
         for(int j= 0; j < blocks_x; j++)
         {
-            blocks.emplace_back((j+1)*(block_width+5),(i+1)*(block_height+5), block_width, block_height);
-        }
-    }
+            if (i == exblock.draw_number_y && j == exblock.draw_number_x)
+            {
 
-    while(true)
+                exblock.set_position();
+                blocks.emplace_back(exblock);
+            }
+            else
+            {
+                Block block((j + 1) * (block_width + 5), (i + 1) * (block_height + 5), block_width, block_height);
+                blocks.emplace_back(block);
+            }
+        }
+    } //block making loop
+
+
+    while(true) //main loop
     {
         if(menu_options ==1)
         {
@@ -152,7 +171,7 @@ int main()
                     }
 
 
-                }
+                } //loop with mein menu
                 window.clear();
                 if(menu_options != 1)
                 {
@@ -163,12 +182,12 @@ int main()
                 window.display();
             }
 
-            if(menu_options == -1)
+            if(menu_options == -1) //close game option
             {
                 window.close();
                 break;
             }
-            else if(menu_options == 0)
+            else if(menu_options == 0) //play game option
             {
                 while(menu_options == 0)
                 {
@@ -188,18 +207,44 @@ int main()
                         collision(paddle, ball);
                         for (auto &block: blocks)
                         {
-                            if (collision(block, ball))
-                            {
-                                break;
-                            }
+
+                                if (collision(block, ball))
+                                {
+                                    break;
+                                }
+
                         }
 
                         auto iterator = remove_if(begin(blocks), end(blocks),
                                                   [](Block &block) { return block.is_destroyed(); });
                         blocks.erase(iterator, end(blocks));
 
+
+                        if(exblock.destroyed)
+                        {
+                            for (auto& block : blocks)
+                            {
+                                if ((((block.position().x == (((exblock.draw_number_x+1)-1)*105) && block.position().y == ((exblock.draw_number_y+1)-1)*65)))
+                                || (((block.position().x == (((exblock.draw_number_x+1)+1)*105) && block.position().y == ((exblock.draw_number_y+1))*65)))
+                                || (((block.position().x == (((exblock.draw_number_x+1)-1)*105) && block.position().y == (exblock.draw_number_y+1)*65)))
+                                || (((block.position().x == (((exblock.draw_number_x+1)-1)*105) && block.position().y == ((exblock.draw_number_y+1)+1)*65)))
+                                || (((block.position().x == (((exblock.draw_number_x+1))*105) && block.position().y == ((exblock.draw_number_y+1)+1)*65)))
+                                || (((block.position().x == ((exblock.draw_number_x+1)*105) && block.position().y == ((exblock.draw_number_y+1)-1)*65)))
+                                || (((block.position().x == (((exblock.draw_number_x+1)+1)*105) && block.position().y == ((exblock.draw_number_y+1)+1)*65)))
+                                || (((block.position().x == (((exblock.draw_number_x+1))*105) && block.position().y == ((exblock.draw_number_y+1))*65)))
+                                || (((block.position().x == (((exblock.draw_number_x+1)+1)*105) && block.position().y == ((exblock.draw_number_y+1)-1)*65))))
+                                {
+                                    block.destroy();
+                                }
+                            }
+                        } //loop destroying blocks all around explosive block
+
+
+
+
                         if (ball.getPosition().y > paddle.top())
                         {
+                            paddle.stop_paddle();
                             ball.under_paddle();
                             Font font;
                             if (!font.loadFromFile("Bambuchinnox.ttf")) {
@@ -212,7 +257,7 @@ int main()
                                                 15.f);
                             window.draw(endgame);
                             //wyświetlanie punktów;
-                            Text score_text("Total Score: " + to_string(score), font, 60);
+                            Text score_text("Total Score: " + std::to_string(score), font, 60);
                             score_text.setFillColor(Color::White);
                             score_text.setPosition(window.getSize().x / 2.f - score_text.getGlobalBounds().width / 2.f,
                                                    window.getSize().y / 2.f + endgame.getGlobalBounds().height / 2.f +
@@ -226,60 +271,85 @@ int main()
                                 } else if (event.key.code == Keyboard::Right) {
                                     menu.MoveRight();
                                 } else if (event.key.code == Keyboard::Return) {
-                                    if (menu.pressed() == 0) //new game
+                                    if (menu.pressed() == 0) //new game options
                                     {
-
                                         menu.all_on_white();
                                         ball.reset_ball();
-                                        paddle.reset_paddle();
+
                                         for (auto &block: blocks) {
-                                            if(block.destroyed == false) {
+                                            if(!block.destroyed) {
                                                 block.destroy();
                                             }
                                         }
+                                        exblock.restore();
+                                        exblock.restore();
+                                        exblock.draw_number();
                                         for(int i = 0; i< blocks_y;i++)
                                         {
                                             for(int j= 0; j < blocks_x; j++)
                                             {
-                                                blocks.emplace_back((j+1)*(block_width+5),(i+1)*(block_height+5), block_width, block_height);
+                                                if (i == exblock.draw_number_y && j == exblock.draw_number_x)
+                                                {
+                                                    exblock.set_position();
+                                                    blocks.emplace_back(exblock);
+                                                }
+                                                else
+                                                {
+                                                    Block block((j + 1) * (block_width + 5), (i + 1) * (block_height + 5), block_width, block_height);
+                                                    blocks.emplace_back(block);
+                                                }
                                             }
                                         }
                                         score =0;
                                         break;
                                     }
-                                    if (menu.pressed() == 1) //back to menu
+                                    if (menu.pressed() == 1) //back to menu options
                                     {
                                         score =0;
                                         menu_options = 1;
                                         menu.all_on_white();
                                         ball.reset_ball();
                                         paddle.reset_paddle();
+                                        paddle.stop_paddle();
+                                        exblock.restore();
                                         for (auto &block: blocks) {
-                                            if(block.destroyed == false) {
+                                            if(!block.destroyed) {
                                                 block.destroy();
                                             }
                                         }
+                                        exblock.draw_number();
                                         for(int i = 0; i< blocks_y;i++)
                                         {
                                             for(int j= 0; j < blocks_x; j++)
                                             {
-                                                blocks.emplace_back((j+1)*(block_width+5),(i+1)*(block_height+5), block_width, block_height);
+                                                if (i == exblock.draw_number_y && j == exblock.draw_number_x)
+                                                {
+                                                    explosiveblock exblock((j + 1) * (block_width + 5), (i + 1) * (block_height + 5), block_width, block_height);
+                                                    blocks.emplace_back(exblock);
+                                                }
+                                                else
+                                                {
+                                                    Block block((j + 1) * (block_width + 5), (i + 1) * (block_height + 5), block_width, block_height);
+                                                    blocks.emplace_back(block);
+                                                }
                                             }
                                         }
                                         break;
                                     }
-                                    if (menu.pressed() == 2) //close game
+                                    if (menu.pressed() == 2) //close game options
                                     {
                                         window.close();
                                         return 0;
                                     }
                                 }
                             }
+                            paddle.reset_paddle();
 
-                        }
-
+                        }//decision describing what will happen if the ball falls under the paddle
+                        paddle.restore_velocity();
                         ball.stop_game();
-                        if (ball.is_stopped == true) {
+                        if (ball.is_stopped)// decision describing what will happen if we stop the game
+                        {
                             if (ball.getPosition().y <= paddle.top()) // zapobiega wyświetlaniu pause po zakończeniu gry
                             {
                                 paddle.stop_paddle();
@@ -295,12 +365,13 @@ int main()
                             }
 
                         }
-                        //Wyświetlanie bieżącego wyniku gracza
-                        Font font;
-                        if (!font.loadFromFile("Bambuchinnox.ttf")) {
+
+                        Font font;                                              //display score
+                        if (!font.loadFromFile("Bambuchinnox.ttf"))
+                        {
                             return -1;
                         }
-                        Text score_text("Score: " + to_string(score), font, 20);
+                        Text score_text("Score: " + std::to_string(score), font, 20);
                         score_text.setFillColor(Color::White);
                         score_text.setPosition(10.f, 10.f);
                         window.draw(score_text);
@@ -314,18 +385,28 @@ int main()
                         for (auto &block: blocks)
                         {
                                 window.draw(block.getShape());
-                        }
+                        } //draw a blocks
                         window.display();
                         if (blocks.empty())
                         {
+                            exblock.draw_number();
                             for(int i = 0; i< blocks_y;i++)
                             {
                                 for(int j= 0; j < blocks_x; j++)
                                 {
-                                    blocks.emplace_back((j+1)*(block_width+5),(i+1)*(block_height+5), block_width, block_height);
+                                    if (i == exblock.draw_number_y && j == exblock.draw_number_x)
+                                    {
+                                        explosiveblock exblock((j + 1) * (block_width + 5), (i + 1) * (block_height + 5), block_width, block_height);
+                                        blocks.emplace_back(exblock);
+                                    }
+                                    else
+                                    {
+                                        Block block((j + 1) * (block_width + 5), (i + 1) * (block_height + 5), block_width, block_height);
+                                        blocks.emplace_back(block);
+                                    }
                                 }
                             }
-                        }
+                        } // function describing what will happen if all blocks are destroyed
                     }
                 }
             }
@@ -389,7 +470,7 @@ int main()
                         }
                     }
                 }
-            }
+            } //show instruction option
         }
     }
 }

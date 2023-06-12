@@ -8,18 +8,18 @@
 		<Option virtualFolders="CMake Files\;CMake Files\cmake_modules\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/wawru/CLionProjects/Arkanoid/cmake-build-release"/>
+				<Option working_dir="C:/Users/adm/CLionProjects/Arkanoid/cmake-build-release"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/wawru/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/wawru/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/wawru/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/wawru/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/adm/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/adm/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/adm/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/adm/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="projekt">
-				<Option output="C:/Users/wawru/CLionProjects/Arkanoid/cmake-build-release/projekt.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/wawru/CLionProjects/Arkanoid/cmake-build-release"/>
+				<Option output="C:/Users/adm/CLionProjects/Arkanoid/cmake-build-release/projekt.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/adm/CLionProjects/Arkanoid/cmake-build-release"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -33,15 +33,15 @@
 					<Add directory="C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/wawru/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 projekt"/>
-					<CompileFile command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/wawru/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/wawru/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/wawru/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/adm/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 projekt"/>
+					<CompileFile command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/adm/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/adm/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/adm/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="projekt/fast">
-				<Option output="C:/Users/wawru/CLionProjects/Arkanoid/cmake-build-release/projekt.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/wawru/CLionProjects/Arkanoid/cmake-build-release"/>
+				<Option output="C:/Users/adm/CLionProjects/Arkanoid/cmake-build-release/projekt.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/adm/CLionProjects/Arkanoid/cmake-build-release"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -55,70 +55,70 @@
 					<Add directory="C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/wawru/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 projekt/fast"/>
-					<CompileFile command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/wawru/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/wawru/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/wawru/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/adm/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 projekt/fast"/>
+					<CompileFile command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/adm/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/adm/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/adm/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/wawru/CLionProjects/Arkanoid/cmake-build-release"/>
+				<Option working_dir="C:/Users/adm/CLionProjects/Arkanoid/cmake-build-release"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/wawru/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/wawru/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/wawru/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/wawru/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/adm/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/adm/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/adm/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/adm/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/wawru/CLionProjects/Arkanoid/cmake-build-release"/>
+				<Option working_dir="C:/Users/adm/CLionProjects/Arkanoid/cmake-build-release"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/wawru/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/wawru/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/wawru/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/wawru/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/adm/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/adm/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/adm/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/adm/CLionProjects/Arkanoid/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/wawru/CLionProjects/Arkanoid/Arkanoid.cpp">
+		<Unit filename="C:/Users/adm/CLionProjects/Arkanoid/Ball.cpp">
 			<Option target="projekt"/>
 		</Unit>
-		<Unit filename="C:/Users/wawru/CLionProjects/Arkanoid/Arkanoid.h">
+		<Unit filename="C:/Users/adm/CLionProjects/Arkanoid/Ball.h">
 			<Option target="projekt"/>
 		</Unit>
-		<Unit filename="C:/Users/wawru/CLionProjects/Arkanoid/Ball.cpp">
+		<Unit filename="C:/Users/adm/CLionProjects/Arkanoid/Block.cpp">
 			<Option target="projekt"/>
 		</Unit>
-		<Unit filename="C:/Users/wawru/CLionProjects/Arkanoid/Ball.h">
+		<Unit filename="C:/Users/adm/CLionProjects/Arkanoid/Block.h">
 			<Option target="projekt"/>
 		</Unit>
-		<Unit filename="C:/Users/wawru/CLionProjects/Arkanoid/Block.cpp">
+		<Unit filename="C:/Users/adm/CLionProjects/Arkanoid/Menu.cpp">
 			<Option target="projekt"/>
 		</Unit>
-		<Unit filename="C:/Users/wawru/CLionProjects/Arkanoid/Block.h">
+		<Unit filename="C:/Users/adm/CLionProjects/Arkanoid/Menu.h">
 			<Option target="projekt"/>
 		</Unit>
-		<Unit filename="C:/Users/wawru/CLionProjects/Arkanoid/Menu.cpp">
+		<Unit filename="C:/Users/adm/CLionProjects/Arkanoid/Paddle.cpp">
 			<Option target="projekt"/>
 		</Unit>
-		<Unit filename="C:/Users/wawru/CLionProjects/Arkanoid/Menu.h">
+		<Unit filename="C:/Users/adm/CLionProjects/Arkanoid/Paddle.h">
 			<Option target="projekt"/>
 		</Unit>
-		<Unit filename="C:/Users/wawru/CLionProjects/Arkanoid/Paddle.cpp">
+		<Unit filename="C:/Users/adm/CLionProjects/Arkanoid/explosiveblock.cpp">
 			<Option target="projekt"/>
 		</Unit>
-		<Unit filename="C:/Users/wawru/CLionProjects/Arkanoid/Paddle.h">
+		<Unit filename="C:/Users/adm/CLionProjects/Arkanoid/explosiveblock.h">
 			<Option target="projekt"/>
 		</Unit>
-		<Unit filename="C:/Users/wawru/CLionProjects/Arkanoid/main.cpp">
+		<Unit filename="C:/Users/adm/CLionProjects/Arkanoid/main.cpp">
 			<Option target="projekt"/>
 		</Unit>
-		<Unit filename="C:/Users/wawru/CLionProjects/Arkanoid/CMakeLists.txt">
+		<Unit filename="C:/Users/adm/CLionProjects/Arkanoid/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="C:/Users/wawru/CLionProjects/Arkanoid/cmake_modules/FindSFML.cmake">
+		<Unit filename="C:/Users/adm/CLionProjects/Arkanoid/cmake_modules/FindSFML.cmake">
 			<Option virtualFolder="CMake Files\cmake_modules\"/>
 		</Unit>
 	</Project>

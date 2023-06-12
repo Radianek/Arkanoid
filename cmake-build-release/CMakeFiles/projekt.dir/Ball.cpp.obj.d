@@ -1,6 +1,6 @@
 CMakeFiles/projekt.dir/Ball.cpp.obj: \
- C:\Users\wawru\CLionProjects\Arkanoid\Ball.cpp \
- C:\Users\wawru\CLionProjects\Arkanoid\Ball.h \
+ C:\Users\adm\CLionProjects\Arkanoid\Ball.cpp \
+ C:\Users\adm\CLionProjects\Arkanoid\Ball.h \
  C:/SFML/include/SFML/Graphics.hpp C:/SFML/include/SFML/Window.hpp \
  C:/SFML/include/SFML/System.hpp C:/SFML/include/SFML/Config.hpp \
  C:/SFML/include/SFML/System/Clock.hpp \
