@@ -1,6 +1,7 @@
-CMakeFiles/projekt.dir/Ball.cpp.obj: \
- C:\Users\adm\CLionProjects\Arkanoid\Ball.cpp \
- C:\Users\adm\CLionProjects\Arkanoid\Ball.h \
+CMakeFiles/projekt.dir/Movingblock.cpp.obj: \
+ C:\Users\adm\CLionProjects\Arkanoid\Movingblock.cpp \
+ C:\Users\adm\CLionProjects\Arkanoid\Movingblock.h \
+ C:\Users\adm\CLionProjects\Arkanoid\Block.h \
  C:/SFML/include/SFML/Graphics.hpp C:/SFML/include/SFML/Window.hpp \
  C:/SFML/include/SFML/System.hpp C:/SFML/include/SFML/Config.hpp \
  C:/SFML/include/SFML/System/Clock.hpp \
@@ -243,20 +244,4 @@ CMakeFiles/projekt.dir/Ball.cpp.obj: \
  C:/SFML/include/SFML/Graphics/Sprite.hpp \
  C:/SFML/include/SFML/Graphics/Text.hpp \
  C:/SFML/include/SFML/Graphics/VertexBuffer.hpp \
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/chrono \
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/ratio \
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/parse_numbers.h \
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/thread \
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/memory \
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_raw_storage_iter.h \
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/ext/concurrence.h \
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/unique_ptr.h \
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/shared_ptr.h \
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/shared_ptr_base.h \
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/allocated_ptr.h \
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/refwrap.h \
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/shared_ptr_atomic.h \
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/atomic_base.h \
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/atomic_lockfree_defines.h \
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward/auto_ptr.h \
  C:\Users\adm\CLionProjects\Arkanoid\ICollidable.h

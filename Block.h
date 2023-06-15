@@ -9,7 +9,7 @@
 #include "ICollidable.h"
 using namespace sf;
 
-class Block{
+class Block : public ICollidable{
 public:
     Block(float pos_X, float pos_Y, float width, float height); //block constructor
     const RectangleShape &get_shape() const;     // function that return block shape
@@ -27,6 +27,10 @@ public:
     bool destroyed{false};  // variable that store a block destoryed value
     int points;     //variable that store a points value
     RectangleShape shape;  //object represent a block shape
+
+    sf::FloatRect get_bounds() const override {
+        return sf::FloatRect(shape.getPosition(), shape.getSize());
+    }
 
 private:
 

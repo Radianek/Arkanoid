@@ -3,7 +3,3 @@
 //
 
 #include "ICollidable.h"
-
-void ICollidable::collide(ICollidable* other){
-    
-}

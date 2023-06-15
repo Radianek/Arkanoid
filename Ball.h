@@ -6,15 +6,12 @@
 #include <chrono>
 #include <thread>
 #include "ICollidable.h"
-#include "Block.h"
-
 
 using namespace sf;
 
 class Ball : public ICollidable{
 public:
     Ball(float pos_X, float pos_Y);  // ball constructor
-    void collide(ICollidable* Other) override;
     const CircleShape &get_shape() const;        // function that return ball shape
     void update(); // function that updates the position of the ball and bouncing off the edge
     void move_down_ball(); //function that changes the direction of the ball down
@@ -37,6 +34,19 @@ public:
     bool ball_under_paddle = false;     //variable that use whedn the ball is under paddle
 
     Text pause;     //text displayed during pause
+
+    sf::FloatRect get_bounds() const override {
+        sf::Vector2f position(/* x */  /* y */);  // Pozycja piłki
+        float radius = shape.getRadius();  // Promień piłki
+
+        sf::FloatRect bounds;
+        bounds.left = shape.getPosition().x - radius;  // Lewa krawędź granic
+        bounds.top = shape.getPosition().y - radius;   // Górna krawędź granic
+        bounds.width = 2 * radius;          // Szerokość granic (średnica)
+        bounds.height = 2 * radius;         // Wysokość granic (średnica)
+
+        return bounds;  // Zwracanie granic piłki
+    }
 private:
     CircleShape shape;  //object represent a ball shape
     const float ball_radius{25.0f};  //variable that stores a ball radius

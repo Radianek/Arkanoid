@@ -20,7 +20,6 @@ public:
     float draw_number_x;    //variable that stores the drawn number
     float draw_number_y;    //variable that stores the drawn number
 
-
 };
 
 

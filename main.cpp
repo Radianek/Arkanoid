@@ -8,10 +8,41 @@
 #include "Block.h"
 #include "Explosiveblock.h"
 #include "Movingblock.h"
+#include "cmath"
 
 using namespace std;
 using namespace sf;
 
+bool checkCollision(const Ball& ball, const Paddle& paddle) {
+    sf::Vector2f ballCenter = ball.get_shape().getPosition();
+    sf::Vector2f paddleCenter = paddle.get_shape().getPosition();
+
+    float ballRadius = ball.get_shape().getRadius();
+    float paddleWidth = paddle.get_bounds().width;
+
+    float distanceX = std::abs(ballCenter.x - paddleCenter.x);
+    float distanceY = std::abs(ballCenter.y - paddleCenter.y);
+
+    if (distanceX > (paddleWidth / 2.0f + ballRadius)) {
+        return false; // Brak kolizji w osi X
+    }
+
+    if (distanceY > (paddleWidth / 2.0f + ballRadius)) {
+        return false; // Brak kolizji w osi Y
+    }
+
+    if (distanceX <= (paddleWidth / 2.0f)) {
+        return true; // Kolizja w osi X
+    }
+
+    if (distanceY <= (paddleWidth / 2.0f)) {
+        return true; // Kolizja w osi Y
+    }
+
+    // Kolizja w rogu paletki
+    float cornerDistance = std::pow(distanceX - paddleWidth / 2.0f, 2.0f) + std::pow(distanceY - paddleWidth / 2.0f, 2.0f);
+    return (cornerDistance <= std::pow(ballRadius, 2.0f));
+}
 template<class C1, class C2>
 bool exist_Collision(C1 &A, C2 &B) {
     return A.right() >= B.left() && A.left() <= B.right()
@@ -30,7 +61,6 @@ bool collision(Paddle &paddle, Ball &ball) {
     } else if (ball.getPosition().x > paddle.get_position().x) {
         ball.move_right_ball();
     }
-
 
     return true;
 }//declaration function that describe collision between ball and paddle
@@ -51,6 +81,8 @@ bool collision(Block &block, Ball &ball) {
         }
 
         block.destroy();
+        block.position().x;
+
         score++;
         float overlap_Left{ball.right() - block.left()};
         float overlap_Right{block.right() - ball.left()};
@@ -185,8 +217,9 @@ int main() {
                             if (collision(block, ball)) {
                                 break;
                             }
-
                         }
+
+
 
                         auto iterator = remove_if(begin(blocks), end(blocks),
                                                   [](Block &block) { return block.is_destroyed(); });
@@ -195,10 +228,8 @@ int main() {
 
                         if (exblock.destroyed == true) {
                             for (auto &block: blocks) {
-                                if ((((block.position().x == (((exblock.draw_number_x + 1) - 1) * 105) &&
-                                       block.position().y == ((exblock.draw_number_y + 1) - 1) * 65)))
-                                    || (((block.position().x == (((exblock.draw_number_x + 1) + 1) * 105) &&
-                                          block.position().y == ((exblock.draw_number_y + 1)) * 65)))
+                                if ((((block.position().x == (((exblock.draw_number_x + 1) - 1) * 105) && block.position().y == ((exblock.draw_number_y + 1) - 1) * 65)))
+                                    || (((block.position().x == (((exblock.draw_number_x + 1) + 1) * 105) && block.position().y == ((exblock.draw_number_y + 1)) * 65)))
                                     || (((block.position().x == (((exblock.draw_number_x + 1) - 1) * 105) &&
                                           block.position().y == (exblock.draw_number_y + 1) * 65)))
                                     || (((block.position().x == (((exblock.draw_number_x + 1) - 1) * 105) &&
