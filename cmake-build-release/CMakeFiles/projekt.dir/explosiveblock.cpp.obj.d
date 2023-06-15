@@ -244,4 +244,5 @@ CMakeFiles/projekt.dir/Explosiveblock.cpp.obj: \
  C:/SFML/include/SFML/Graphics/Sprite.hpp \
  C:/SFML/include/SFML/Graphics/Text.hpp \
  C:/SFML/include/SFML/Graphics/VertexBuffer.hpp \
+ C:\Users\adm\CLionProjects\Arkanoid\ICollidable.h \
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/iostream

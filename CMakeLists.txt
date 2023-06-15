@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES main.cpp Ball.cpp Ball.h Paddle.cpp Paddle.h Block.cpp Block.h Menu.cpp Menu.h Explosiveblock.cpp Explosiveblock.h)
+set(SOURCE_FILES main.cpp Ball.cpp Ball.h Paddle.cpp Paddle.h Block.cpp Block.h Menu.cpp Menu.h Explosiveblock.cpp Explosiveblock.h Movingblock.cpp Movingblock.h ICollidable.cpp ICollidable.h)
 add_executable(projekt ${SOURCE_FILES})
 
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake_modules")

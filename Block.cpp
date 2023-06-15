@@ -11,6 +11,7 @@ Block::Block(float pos_X, float pos_Y, float width, float height) {
     shape.setOrigin(width / 2.f, height / 2.f);
 }
 
+
 const RectangleShape &Block::get_shape() const {
     return shape;
 }

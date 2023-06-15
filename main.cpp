@@ -7,7 +7,7 @@
 #include "Menu.h"
 #include "Block.h"
 #include "Explosiveblock.h"
-
+#include "Movingblock.h"
 
 using namespace std;
 using namespace sf;
@@ -22,8 +22,8 @@ bool collision(Paddle &paddle, Ball &ball) {
     if (!exist_Collision(paddle, ball)) {
         return false;
     }
-
     ball.move_up_ball();
+
 
     if (ball.getPosition().x < paddle.get_position().x) {
         ball.move_left_ball();
@@ -37,6 +37,7 @@ bool collision(Paddle &paddle, Ball &ball) {
 int score = 0;
 
 Explosiveblock exblock(500, 500, 100, 60);
+Movingblock moveblock(500, 325, 100,60);
 
 bool collision(Block &block, Ball &ball) {
 
@@ -148,7 +149,6 @@ int main() {
                         }
                     }
 
-
                 } //loop with mein menu
                 window.clear();
                 if (menu_options != 1) {
@@ -162,7 +162,7 @@ int main() {
             if (menu_options == -1) //close game option
             {
                 window.close();
-                break;
+                return 0;
             } else if (menu_options == 0) //play game option
             {
                 while (menu_options == 0) {
@@ -178,6 +178,7 @@ int main() {
 
                         ball.update();
                         paddle.update();
+                        moveblock.update();
                         collision(paddle, ball);
                         for (auto &block: blocks) {
 
@@ -223,6 +224,7 @@ int main() {
                         if (ball.getPosition().y > paddle.top()) {
                             paddle.stop_paddle();
                             ball.under_paddle();
+                            moveblock.stop();
                             Font font;
                             if (!font.loadFromFile("Bambuchinnox.ttf")) {
                                 return -1;
@@ -240,6 +242,7 @@ int main() {
                                                    window.getSize().y / 2.f + endgame.getGlobalBounds().height / 2.f +
                                                    score_text.getGlobalBounds().height / 2.f);
                             window.draw(score_text);
+                            moveblock.stop();
                             paddle.stop_paddle();
                             menu.draw_end_menu(window);
                             if (event.type == Event::KeyPressed) {
@@ -254,7 +257,7 @@ int main() {
                                     {
                                         menu.all_on_white();
                                         ball.reset_ball();
-
+                                        moveblock.move();
                                         for (auto &block: blocks) {
                                             if (!block.destroyed) {
                                                 block.destroy();
@@ -287,6 +290,7 @@ int main() {
                                         menu.all_on_white();
                                         ball.reset_ball();
                                         paddle.reset_paddle();
+                                        moveblock.move();
                                         paddle.stop_paddle();
                                         exblock.restore();
                                         for (auto &block: blocks) {
@@ -314,7 +318,7 @@ int main() {
 
                                     }
                                     if (menu.pressed() == 2) {
-                                        menu_options = -1;
+                                        return 0;
                                     }
                                 }
                             }
@@ -322,13 +326,18 @@ int main() {
 
                         }//decision describing what will happen if the ball falls under the paddle
                         paddle.restore_velocity();
-                        ball.stop_game();
-                        if (ball.is_stopped == true)// decision describing what will happen if we stop the game
+                        if (Keyboard::isKeyPressed(Keyboard::P)) {
+                            ball.stop_game();
+                            moveblock.movingblock_stop_game();
+                        }
+                        if (ball.is_stopped == true)// decision describing what will happen if we stop the gamep
                         {
                             if (ball.getPosition().y <= paddle.top()) // zapobiega wyświetlaniu pause po zakończeniu gry
                             {
+
                                 paddle.stop_paddle();
                                 Font font;
+                                moveblock.stopped = true;
                                 if (!font.loadFromFile("Bambuchinnox.ttf")) {
                                     return -1;
                                 }
@@ -337,9 +346,10 @@ int main() {
                                 pause.setPosition(1650 / 2.f - pause.getGlobalBounds().width / 2.f,
                                                   1050 / 2.f - pause.getGlobalBounds().height / 2.f);
                                 window.draw(pause);
-                            }
 
+                            }
                         }
+
 
                         Font font;                                              //display score
                         if (!font.loadFromFile("Bambuchinnox.ttf")) {
@@ -353,8 +363,11 @@ int main() {
 
                         ball.update();
                         paddle.update();
+                        moveblock.update();
                         window.draw(ball.get_shape());
                         window.draw(paddle.get_shape());
+                        window.draw(moveblock.get_shape());
+
 
                         for (auto &block: blocks) {
                             window.draw(block.get_shape());
@@ -378,13 +391,13 @@ int main() {
                         } // function describing what will happen if all blocks are destroyed
                     }
                 }
+
             } else if (menu_options == 2) {
                 while (window.isOpen()) {
                     window.clear(Color::Black);
                     window.pollEvent(event);
 
                     if (event.type == Event::Closed) {
-                        window.close();
                         return 0;
                     }
 

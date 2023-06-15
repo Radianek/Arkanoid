@@ -13,6 +13,13 @@ Ball::Ball(float pos_X, float pos_Y) {
     shape.setOrigin(this->ball_radius, this->ball_radius);
 }
 
+void Ball::collide(ICollidable *Other)
+{
+    if(Block* block = dynamic_cast<Block*>(Other)){
+
+    }
+}
+
 const CircleShape &Ball::get_shape() const {
     return shape;
 }
@@ -81,8 +88,9 @@ void Ball::under_paddle() {
 }
 
 void Ball::stop_game() {
-    if (Keyboard::isKeyPressed(Keyboard::P)) {
         static bool ball_stopped = false;
+        std::chrono::milliseconds waiting_time(150);
+        std::this_thread::sleep_for(waiting_time);
         is_stopped = true;
         if (!ball_stopped) {
             ball_velocity_helper_x = this->velocity.x;
@@ -98,7 +106,6 @@ void Ball::stop_game() {
 
         }
     }
-}
 
 Vector2f Ball::getPosition() {
     return shape.getPosition();

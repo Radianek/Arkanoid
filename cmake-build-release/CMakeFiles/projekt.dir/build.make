@@ -158,6 +158,36 @@ CMakeFiles/projekt.dir/Explosiveblock.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projekt.dir/Explosiveblock.cpp.s"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\adm\CLionProjects\Arkanoid\Explosiveblock.cpp -o CMakeFiles\projekt.dir\Explosiveblock.cpp.s
 
+CMakeFiles/projekt.dir/Movingblock.cpp.obj: CMakeFiles/projekt.dir/flags.make
+CMakeFiles/projekt.dir/Movingblock.cpp.obj: CMakeFiles/projekt.dir/includes_CXX.rsp
+CMakeFiles/projekt.dir/Movingblock.cpp.obj: C:/Users/adm/CLionProjects/Arkanoid/Movingblock.cpp
+CMakeFiles/projekt.dir/Movingblock.cpp.obj: CMakeFiles/projekt.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\adm\CLionProjects\Arkanoid\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/projekt.dir/Movingblock.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/projekt.dir/Movingblock.cpp.obj -MF CMakeFiles\projekt.dir\Movingblock.cpp.obj.d -o CMakeFiles\projekt.dir\Movingblock.cpp.obj -c C:\Users\adm\CLionProjects\Arkanoid\Movingblock.cpp
+
+CMakeFiles/projekt.dir/Movingblock.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projekt.dir/Movingblock.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\adm\CLionProjects\Arkanoid\Movingblock.cpp > CMakeFiles\projekt.dir\Movingblock.cpp.i
+
+CMakeFiles/projekt.dir/Movingblock.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projekt.dir/Movingblock.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\adm\CLionProjects\Arkanoid\Movingblock.cpp -o CMakeFiles\projekt.dir\Movingblock.cpp.s
+
+CMakeFiles/projekt.dir/ICollidable.cpp.obj: CMakeFiles/projekt.dir/flags.make
+CMakeFiles/projekt.dir/ICollidable.cpp.obj: CMakeFiles/projekt.dir/includes_CXX.rsp
+CMakeFiles/projekt.dir/ICollidable.cpp.obj: C:/Users/adm/CLionProjects/Arkanoid/ICollidable.cpp
+CMakeFiles/projekt.dir/ICollidable.cpp.obj: CMakeFiles/projekt.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\adm\CLionProjects\Arkanoid\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/projekt.dir/ICollidable.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/projekt.dir/ICollidable.cpp.obj -MF CMakeFiles\projekt.dir\ICollidable.cpp.obj.d -o CMakeFiles\projekt.dir\ICollidable.cpp.obj -c C:\Users\adm\CLionProjects\Arkanoid\ICollidable.cpp
+
+CMakeFiles/projekt.dir/ICollidable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projekt.dir/ICollidable.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\adm\CLionProjects\Arkanoid\ICollidable.cpp > CMakeFiles\projekt.dir\ICollidable.cpp.i
+
+CMakeFiles/projekt.dir/ICollidable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projekt.dir/ICollidable.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\adm\CLionProjects\Arkanoid\ICollidable.cpp -o CMakeFiles\projekt.dir\ICollidable.cpp.s
+
 # Object files for target projekt
 projekt_OBJECTS = \
 "CMakeFiles/projekt.dir/main.cpp.obj" \
@@ -165,7 +195,9 @@ projekt_OBJECTS = \
 "CMakeFiles/projekt.dir/Paddle.cpp.obj" \
 "CMakeFiles/projekt.dir/Block.cpp.obj" \
 "CMakeFiles/projekt.dir/Menu.cpp.obj" \
-"CMakeFiles/projekt.dir/Explosiveblock.cpp.obj"
+"CMakeFiles/projekt.dir/Explosiveblock.cpp.obj" \
+"CMakeFiles/projekt.dir/Movingblock.cpp.obj" \
+"CMakeFiles/projekt.dir/ICollidable.cpp.obj"
 
 # External object files for target projekt
 projekt_EXTERNAL_OBJECTS =
@@ -176,6 +208,8 @@ projekt.exe: CMakeFiles/projekt.dir/Paddle.cpp.obj
 projekt.exe: CMakeFiles/projekt.dir/Block.cpp.obj
 projekt.exe: CMakeFiles/projekt.dir/Menu.cpp.obj
 projekt.exe: CMakeFiles/projekt.dir/Explosiveblock.cpp.obj
+projekt.exe: CMakeFiles/projekt.dir/Movingblock.cpp.obj
+projekt.exe: CMakeFiles/projekt.dir/ICollidable.cpp.obj
 projekt.exe: CMakeFiles/projekt.dir/build.make
 projekt.exe: C:/SFML/lib/libsfml-system.a
 projekt.exe: C:/SFML/lib/libsfml-window.a
@@ -185,7 +219,7 @@ projekt.exe: C:/SFML/lib/libsfml-audio.a
 projekt.exe: CMakeFiles/projekt.dir/linklibs.rsp
 projekt.exe: CMakeFiles/projekt.dir/objects1.rsp
 projekt.exe: CMakeFiles/projekt.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\adm\CLionProjects\Arkanoid\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable projekt.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\adm\CLionProjects\Arkanoid\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable projekt.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\projekt.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

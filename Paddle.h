@@ -6,10 +6,11 @@
 #define PROJEKT_PADDLE_H
 
 #include <SFML/Graphics.hpp>
+#include "ICollidable.h"
 
 using namespace sf;
 
-class Paddle {
+class Paddle: public sf::RectangleShape, public ICollidable {
 public:
     Paddle(float pos_X, float pos_Y);       //paddle constructor
     void update();      // function that updates the position of the paddle and bouncing off the edge

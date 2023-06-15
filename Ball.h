@@ -3,14 +3,18 @@
 
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
+#include <chrono>
+#include <thread>
+#include "ICollidable.h"
+#include "Block.h"
+
 
 using namespace sf;
 
-class Ball {
+class Ball : public ICollidable{
 public:
     Ball(float pos_X, float pos_Y);  // ball constructor
-
-    // Pobierania kształtu piłki
+    void collide(ICollidable* Other) override;
     const CircleShape &get_shape() const;        // function that return ball shape
     void update(); // function that updates the position of the ball and bouncing off the edge
     void move_down_ball(); //function that changes the direction of the ball down
@@ -39,6 +43,7 @@ private:
     float ball_velocity{5.0f};       //variable that stores a ball rvelocity
     Vector2f velocity{ball_velocity, ball_velocity};  //vector that stores information about ball velocity
     void draw(RenderTarget &target, RenderStates state) const;  //function that draw a ball
+
 };
 
 #endif

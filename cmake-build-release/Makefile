@@ -200,6 +200,30 @@ Explosiveblock.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt.dir\build.make CMakeFiles/projekt.dir/Explosiveblock.cpp.s
 .PHONY : Explosiveblock.cpp.s
 
+ICollidable.obj: ICollidable.cpp.obj
+.PHONY : ICollidable.obj
+
+# target to build an object file
+ICollidable.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt.dir\build.make CMakeFiles/projekt.dir/ICollidable.cpp.obj
+.PHONY : ICollidable.cpp.obj
+
+ICollidable.i: ICollidable.cpp.i
+.PHONY : ICollidable.i
+
+# target to preprocess a source file
+ICollidable.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt.dir\build.make CMakeFiles/projekt.dir/ICollidable.cpp.i
+.PHONY : ICollidable.cpp.i
+
+ICollidable.s: ICollidable.cpp.s
+.PHONY : ICollidable.s
+
+# target to generate assembly for a file
+ICollidable.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt.dir\build.make CMakeFiles/projekt.dir/ICollidable.cpp.s
+.PHONY : ICollidable.cpp.s
+
 Menu.obj: Menu.cpp.obj
 .PHONY : Menu.obj
 
@@ -223,6 +247,30 @@ Menu.s: Menu.cpp.s
 Menu.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt.dir\build.make CMakeFiles/projekt.dir/Menu.cpp.s
 .PHONY : Menu.cpp.s
+
+Movingblock.obj: Movingblock.cpp.obj
+.PHONY : Movingblock.obj
+
+# target to build an object file
+Movingblock.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt.dir\build.make CMakeFiles/projekt.dir/Movingblock.cpp.obj
+.PHONY : Movingblock.cpp.obj
+
+Movingblock.i: Movingblock.cpp.i
+.PHONY : Movingblock.i
+
+# target to preprocess a source file
+Movingblock.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt.dir\build.make CMakeFiles/projekt.dir/Movingblock.cpp.i
+.PHONY : Movingblock.cpp.i
+
+Movingblock.s: Movingblock.cpp.s
+.PHONY : Movingblock.s
+
+# target to generate assembly for a file
+Movingblock.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt.dir\build.make CMakeFiles/projekt.dir/Movingblock.cpp.s
+.PHONY : Movingblock.cpp.s
 
 Paddle.obj: Paddle.cpp.obj
 .PHONY : Paddle.obj
@@ -290,9 +338,15 @@ help:
 	@echo ... Explosiveblock.obj
 	@echo ... Explosiveblock.i
 	@echo ... Explosiveblock.s
+	@echo ... ICollidable.obj
+	@echo ... ICollidable.i
+	@echo ... ICollidable.s
 	@echo ... Menu.obj
 	@echo ... Menu.i
 	@echo ... Menu.s
+	@echo ... Movingblock.obj
+	@echo ... Movingblock.i
+	@echo ... Movingblock.s
 	@echo ... Paddle.obj
 	@echo ... Paddle.i
 	@echo ... Paddle.s

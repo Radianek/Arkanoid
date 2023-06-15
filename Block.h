@@ -6,10 +6,10 @@
 #define PROJEKT_BLOCK_H
 
 #include <SFML/Graphics.hpp>
-
+#include "ICollidable.h"
 using namespace sf;
 
-class Block {
+class Block{
 public:
     Block(float pos_X, float pos_Y, float width, float height); //block constructor
     const RectangleShape &get_shape() const;     // function that return block shape
