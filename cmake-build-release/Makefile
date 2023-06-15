@@ -176,6 +176,30 @@ Block.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt.dir\build.make CMakeFiles/projekt.dir/Block.cpp.s
 .PHONY : Block.cpp.s
 
+Explosiveblock.obj: Explosiveblock.cpp.obj
+.PHONY : Explosiveblock.obj
+
+# target to build an object file
+Explosiveblock.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt.dir\build.make CMakeFiles/projekt.dir/Explosiveblock.cpp.obj
+.PHONY : Explosiveblock.cpp.obj
+
+Explosiveblock.i: Explosiveblock.cpp.i
+.PHONY : Explosiveblock.i
+
+# target to preprocess a source file
+Explosiveblock.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt.dir\build.make CMakeFiles/projekt.dir/Explosiveblock.cpp.i
+.PHONY : Explosiveblock.cpp.i
+
+Explosiveblock.s: Explosiveblock.cpp.s
+.PHONY : Explosiveblock.s
+
+# target to generate assembly for a file
+Explosiveblock.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt.dir\build.make CMakeFiles/projekt.dir/Explosiveblock.cpp.s
+.PHONY : Explosiveblock.cpp.s
+
 Menu.obj: Menu.cpp.obj
 .PHONY : Menu.obj
 
@@ -224,30 +248,6 @@ Paddle.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt.dir\build.make CMakeFiles/projekt.dir/Paddle.cpp.s
 .PHONY : Paddle.cpp.s
 
-explosiveblock.obj: explosiveblock.cpp.obj
-.PHONY : explosiveblock.obj
-
-# target to build an object file
-explosiveblock.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt.dir\build.make CMakeFiles/projekt.dir/explosiveblock.cpp.obj
-.PHONY : explosiveblock.cpp.obj
-
-explosiveblock.i: explosiveblock.cpp.i
-.PHONY : explosiveblock.i
-
-# target to preprocess a source file
-explosiveblock.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt.dir\build.make CMakeFiles/projekt.dir/explosiveblock.cpp.i
-.PHONY : explosiveblock.cpp.i
-
-explosiveblock.s: explosiveblock.cpp.s
-.PHONY : explosiveblock.s
-
-# target to generate assembly for a file
-explosiveblock.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\projekt.dir\build.make CMakeFiles/projekt.dir/explosiveblock.cpp.s
-.PHONY : explosiveblock.cpp.s
-
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -287,15 +287,15 @@ help:
 	@echo ... Block.obj
 	@echo ... Block.i
 	@echo ... Block.s
+	@echo ... Explosiveblock.obj
+	@echo ... Explosiveblock.i
+	@echo ... Explosiveblock.s
 	@echo ... Menu.obj
 	@echo ... Menu.i
 	@echo ... Menu.s
 	@echo ... Paddle.obj
 	@echo ... Paddle.i
 	@echo ... Paddle.s
-	@echo ... explosiveblock.obj
-	@echo ... explosiveblock.i
-	@echo ... explosiveblock.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

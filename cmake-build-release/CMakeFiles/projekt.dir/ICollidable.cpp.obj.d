@@ -1,7 +1,6 @@
-CMakeFiles/projekt.dir/Explosiveblock.cpp.obj: \
- C:\Users\adm\CLionProjects\Arkanoid\Explosiveblock.cpp \
- C:\Users\adm\CLionProjects\Arkanoid\Explosiveblock.h \
- C:\Users\adm\CLionProjects\Arkanoid\Block.h \
+CMakeFiles/projekt.dir/ICollidable.cpp.obj: \
+ C:\Users\adm\CLionProjects\Arkanoid\ICollidable.cpp \
+ C:\Users\adm\CLionProjects\Arkanoid\ICollidable.h \
  C:/SFML/include/SFML/Graphics.hpp C:/SFML/include/SFML/Window.hpp \
  C:/SFML/include/SFML/System.hpp C:/SFML/include/SFML/Config.hpp \
  C:/SFML/include/SFML/System/Clock.hpp \
@@ -243,5 +242,4 @@ CMakeFiles/projekt.dir/Explosiveblock.cpp.obj: \
  C:/SFML/include/SFML/Graphics/Glsl.inl \
  C:/SFML/include/SFML/Graphics/Sprite.hpp \
  C:/SFML/include/SFML/Graphics/Text.hpp \
- C:/SFML/include/SFML/Graphics/VertexBuffer.hpp \
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/iostream
+ C:/SFML/include/SFML/Graphics/VertexBuffer.hpp

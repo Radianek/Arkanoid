@@ -20,123 +20,41 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="666b959d-4b4e-43c0-8fb5-cd221a2a99fd" name="Changes" comment="-edycja grafiki">
+    <list default="true" id="666b959d-4b4e-43c0-8fb5-cd221a2a99fd" name="Changes" comment="without namespace">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arkanoid.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arkanoid.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Ball.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Ball.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ball.h" beforeDir="false" afterPath="$PROJECT_DIR$/Ball.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Block.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Block.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Block.h" beforeDir="false" afterPath="$PROJECT_DIR$/Block.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Diagram_klas.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Diagram_użyc - do poprawy jeszcze.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Menu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Menu.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Menu.h" beforeDir="false" afterPath="$PROJECT_DIR$/Menu.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Paddle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Paddle.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Paddle.h" beforeDir="false" afterPath="$PROJECT_DIR$/Paddle.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-a8382b6d7bb7f11ffd98.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-08eaa529bd89ba5c2287.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-793ceb8d9a191b4edd3b.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-05-27T08-45-06-0215.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-projekt-Debug-960b33fc01bed47a5746.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-f63cc4672ff25230aee2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CMakeRCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CompilerIdC/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CompilerIdCXX/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projekt.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projekt.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projekt.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projekt.dir/compiler_depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projekt.dir/compiler_depend.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projekt.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projekt.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projekt.dir/includes_CXX.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projekt.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projekt.dir/linkLibs.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projekt.dir/objects1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projekt.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/openal32.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/projekt.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sfml-audio-2.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sfml-audio-d-2.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sfml-graphics-2.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sfml-graphics-d-2.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sfml-network-2.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sfml-network-d-2.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sfml-system-2.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sfml-system-d-2.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sfml-window-2.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sfml-window-d-2.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/.cmake/api/v1/reply/codemodel-v2-872ec5f04a6f43b7f9ab.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/.cmake/api/v1/reply/target-projekt-Release-aba947850311ab070368.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/3.25.2/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/3.25.2/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/3.25.2/CMakeRCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/3.25.2/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/3.25.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/3.25.2/CompilerIdC/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/3.25.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/3.25.2/CompilerIdCXX/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/clion-Release-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/clion-Release-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/Arkanoid.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/Arkanoid.cpp.obj.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/Ball.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/Ball.cpp.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/.cmake/api/v1/reply/codemodel-v2-c75287d951a4dc21b2ae.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/.cmake/api/v1/reply/index-2023-06-12T14-27-39-0095.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/.cmake/api/v1/reply/target-projekt-Release-d82debdebdf9f1e5b14a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/Ball.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/Ball.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/Block.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/Block.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/Block.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/Block.cpp.obj.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/Menu.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/Menu.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/Menu.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/Menu.cpp.obj.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/Paddle.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/Paddle.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/Paddle.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/Paddle.cpp.obj.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/compiler_depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/compiler_depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/explosiveblock.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/explosiveblock.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/explosiveblock.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/explosiveblock.cpp.obj.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/main.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/main.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/main.cpp.obj.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/objects1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/objects1.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/projekt.dir/objects1.rsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-release/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-release/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/instrukcja.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/instrukcja.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-release/projekt.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/projekt.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-release/projekt.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/projekt.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/rysunek.svg.2023_05_20_19_35_27.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/explosiveblock.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/explosiveblock.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/explosiveblock.h" beforeDir="false" afterPath="$PROJECT_DIR$/explosiveblock.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -200,9 +118,9 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="projekt" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="projekt" TARGET_NAME="projekt" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="projekt" RUN_TARGET_NAME="projekt">
@@ -254,7 +172,12 @@
       <workItem from="1685211259531" duration="85000" />
       <workItem from="1685539321774" duration="280000" />
       <workItem from="1686569583230" duration="48000" />
-      <workItem from="1686579904840" duration="2498000" />
+      <workItem from="1686579904840" duration="2542000" />
+      <workItem from="1686596950551" duration="1912000" />
+      <workItem from="1686599112052" duration="28000" />
+      <workItem from="1686639970740" duration="508000" />
+      <workItem from="1686640497868" duration="6384000" />
+      <workItem from="1686856706255" duration="527000" />
     </task>
     <task id="LOCAL-00001" summary="piewszy commit">
       <created>1683474850117</created>
@@ -424,7 +347,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685100469793</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="without namespace">
+      <created>1686582498267</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1686582498267</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -454,6 +384,7 @@
     <MESSAGE value="-dodanie bloków" />
     <MESSAGE value="-dodanie instrukcji" />
     <MESSAGE value="-edycja grafiki" />
-    <option name="LAST_COMMIT_MESSAGE" value="-edycja grafiki" />
+    <MESSAGE value="without namespace" />
+    <option name="LAST_COMMIT_MESSAGE" value="without namespace" />
   </component>
 </project>

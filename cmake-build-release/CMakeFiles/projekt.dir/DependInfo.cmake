@@ -10,9 +10,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/adm/CLionProjects/Arkanoid/Ball.cpp" "CMakeFiles/projekt.dir/Ball.cpp.obj" "gcc" "CMakeFiles/projekt.dir/Ball.cpp.obj.d"
   "C:/Users/adm/CLionProjects/Arkanoid/Block.cpp" "CMakeFiles/projekt.dir/Block.cpp.obj" "gcc" "CMakeFiles/projekt.dir/Block.cpp.obj.d"
+  "C:/Users/adm/CLionProjects/Arkanoid/Explosiveblock.cpp" "CMakeFiles/projekt.dir/Explosiveblock.cpp.obj" "gcc" "CMakeFiles/projekt.dir/Explosiveblock.cpp.obj.d"
   "C:/Users/adm/CLionProjects/Arkanoid/Menu.cpp" "CMakeFiles/projekt.dir/Menu.cpp.obj" "gcc" "CMakeFiles/projekt.dir/Menu.cpp.obj.d"
   "C:/Users/adm/CLionProjects/Arkanoid/Paddle.cpp" "CMakeFiles/projekt.dir/Paddle.cpp.obj" "gcc" "CMakeFiles/projekt.dir/Paddle.cpp.obj.d"
-  "C:/Users/adm/CLionProjects/Arkanoid/explosiveblock.cpp" "CMakeFiles/projekt.dir/explosiveblock.cpp.obj" "gcc" "CMakeFiles/projekt.dir/explosiveblock.cpp.obj.d"
   "C:/Users/adm/CLionProjects/Arkanoid/main.cpp" "CMakeFiles/projekt.dir/main.cpp.obj" "gcc" "CMakeFiles/projekt.dir/main.cpp.obj.d"
   )
 

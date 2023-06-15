@@ -1,34 +1,34 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
+#include <chrono>
+#include <thread>
 #include "Ball.h"
 #include "Paddle.h"
 #include "Menu.h"
 #include "Block.h"
-#include "explosiveblock.h"
+#include "Explosiveblock.h"
 
 
-template <class C1, class C2> bool exist_Collision(C1& A, C2& B)
-{
-     return A.right() >= B.left() && A.left() <= B.right()
-     && A.bottom() >= B.top() && A.top() <= B.bottom();
+using namespace std;
+using namespace sf;
+
+template<class C1, class C2>
+bool exist_Collision(C1 &A, C2 &B) {
+    return A.right() >= B.left() && A.left() <= B.right()
+           && A.bottom() >= B.top() && A.top() <= B.bottom();
 } //declaration function that describe collision
 
-bool collision(Paddle& paddle, Ball& ball)
-{
-    if(!exist_Collision(paddle, ball))
-    {
+bool collision(Paddle &paddle, Ball &ball) {
+    if (!exist_Collision(paddle, ball)) {
         return false;
     }
 
-    ball.moveUp();
+    ball.move_up_ball();
 
-    if(ball.getPosition().x < paddle.getPosition().x)
-    {
-        ball.moveLeft();
-    }
-    else if (ball.getPosition().x > paddle.getPosition().x)
-    {
-        ball.moveRight();
+    if (ball.getPosition().x < paddle.get_position().x) {
+        ball.move_left_ball();
+    } else if (ball.getPosition().x > paddle.get_position().x) {
+        ball.move_right_ball();
     }
 
 
@@ -36,54 +36,48 @@ bool collision(Paddle& paddle, Ball& ball)
 }//declaration function that describe collision between ball and paddle
 int score = 0;
 
-explosiveblock exblock(500, 500, 100, 60);
+Explosiveblock exblock(500, 500, 100, 60);
 
-bool collision(Block& block, Ball& ball)
-{
+bool collision(Block &block, Ball &ball) {
 
-    if(!exist_Collision(block, ball))
-    {
+    if (!exist_Collision(block, ball)) {
         return false;
     }
-    if(!block.destroyed)
-    {
-            if(exist_Collision(exblock, ball))
-            {
-                exblock.destroy();
-                score = score + 50;
-            }
+    if (!block.destroyed) {
+        if (exist_Collision(exblock, ball)) {
+            exblock.destroy();
+            score = score + 50;
+        }
 
         block.destroy();
-        score ++;
-        float overlap_Left { ball.right() - block.left()};
-        float overlap_Right { block.right() - ball.left()};
-        float overlap_Top {ball.bottom() - block.top()};
-        float overlap_Bottom {block.bottom() - ball.top()};
+        score++;
+        float overlap_Left{ball.right() - block.left()};
+        float overlap_Right{block.right() - ball.left()};
+        float overlap_Top{ball.bottom() - block.top()};
+        float overlap_Bottom{block.bottom() - ball.top()};
 
-        bool ball_from_left( std::abs(overlap_Left) < std::abs(overlap_Right));
-        bool ball_from_top( std::abs(overlap_Top) < std::abs(overlap_Bottom));
+        bool ball_from_left(abs(overlap_Left) < abs(overlap_Right));
+        bool ball_from_top(abs(overlap_Top) < abs(overlap_Bottom));
 
-        float min_overlap_x {ball_from_left ? overlap_Left : overlap_Right};
-        float min_overlap_y {ball_from_top ? overlap_Top : overlap_Bottom};
+        float min_overlap_x{ball_from_left ? overlap_Left : overlap_Right};
+        float min_overlap_y{ball_from_top ? overlap_Top : overlap_Bottom};
 
-        if(std::abs(min_overlap_x) < std::abs(min_overlap_y))
-        {
-            ball_from_left ? ball.moveLeft() : ball.moveRight();
+        if (abs(min_overlap_x) < abs(min_overlap_y)) {
+            ball_from_left ? ball.move_left_ball() : ball.move_right_ball();
+        } else {
+            ball_from_top ? ball.move_up_ball() : ball.move_down_ball();
         }
-        else
-        {
-            ball_from_top ? ball.moveUp() : ball.moveDown();
-        }
+
+        return true;
     }
-    return true;
+
 }   //declaration function that describe collision between ball and blocks
 
 
-int main()
-{
+int main() {
 
 
-    int menu_options =1;
+    int menu_options = 1;
     /***************************************************************
      *          menu_options           *          Function         *
      * ____________________________________________________________*
@@ -97,31 +91,28 @@ int main()
 
     Ball ball(500, 500);
     Paddle paddle(950, 950);
-    RenderWindow window (VideoMode(1650, 1050),"Arcanoid");
+    RenderWindow window(VideoMode(1650, 1050), "Arcanoid");
     Menu menu(1920, 1080);
     Texture mainmenu_photo;
     Texture instruction_photo;
     instruction_photo.loadFromFile("instrukcja.png");
     mainmenu_photo.loadFromFile("obraz.png");
     Sprite photo;
+    Text endgame;
     photo.setTexture(mainmenu_photo);
     window.setFramerateLimit(60);
     Event event;
-    unsigned blocks_x {15}, blocks_y{4}, block_width{100}, block_height{60};
-    std::vector<Block> blocks;
+    std::chrono::milliseconds waiting_time(200);
+    unsigned blocks_x{15}, blocks_y{4}, block_width{100}, block_height{60};
+    vector<Block> blocks;
     exblock.draw_number();
-    for(int i = 0; i< blocks_y;i++)
-    {
-        for(int j= 0; j < blocks_x; j++)
-        {
-            if (i == exblock.draw_number_y && j == exblock.draw_number_x)
-            {
+    for (int i = 0; i < blocks_y; i++) {
+        for (int j = 0; j < blocks_x; j++) {
+            if (i == exblock.draw_number_y && j == exblock.draw_number_x) {
 
                 exblock.set_position();
                 blocks.emplace_back(exblock);
-            }
-            else
-            {
+            } else {
                 Block block((j + 1) * (block_width + 5), (i + 1) * (block_height + 5), block_width, block_height);
                 blocks.emplace_back(block);
             }
@@ -129,43 +120,30 @@ int main()
     } //block making loop
 
 
-    while(true) //main loop
+    while (true) //main loop
     {
-        if(menu_options ==1)
-        {
-            while(window.isOpen())
-            {
-                while (window.pollEvent(event))
-                {
-                    if(event.type==Event::Closed)
-                    {
+        if (menu_options == 1) {
+            while (window.isOpen()) {
+                while (window.pollEvent(event)) {
+                    if (event.type == Event::Closed) {
                         window.close();
                         return 0;
                     }
 
-                    if(event.type==Event::KeyPressed)
-                    {
-                        if(event.key.code == Keyboard::Up)
-                        {
-                            menu.MoveUp();
-                        }
-                        else if(event.key.code == Keyboard::Down)
-                        {
-                            menu.MoveDown();
-                        }
-                        else if(event.key.code==Keyboard::Return)
-                        {
-                            if(menu.pressed()==0)
-                            {
-                                menu_options=0;
+                    if (event.type == Event::KeyPressed) {
+                        if (event.key.code == Keyboard::Up) {
+                            menu.move_up();
+                        } else if (event.key.code == Keyboard::Down) {
+                            menu.move_down();
+                        } else if (event.key.code == Keyboard::Return) {
+                            if (menu.pressed() == 0) {
+                                menu_options = 0;
                             }
-                            if(menu.pressed()==1)
-                            {
-                                menu_options=2;
+                            if (menu.pressed() == 1) {
+                                menu_options = 2;
                             }
-                            if(menu.pressed()==2)
-                            {
-                               menu_options=-1;
+                            if (menu.pressed() == 2) {
+                                menu_options = -1;
                             }
                         }
                     }
@@ -173,8 +151,7 @@ int main()
 
                 } //loop with mein menu
                 window.clear();
-                if(menu_options != 1)
-                {
+                if (menu_options != 1) {
                     break;
                 }
                 window.draw(photo);
@@ -182,17 +159,14 @@ int main()
                 window.display();
             }
 
-            if(menu_options == -1) //close game option
+            if (menu_options == -1) //close game option
             {
                 window.close();
                 break;
-            }
-            else if(menu_options == 0) //play game option
+            } else if (menu_options == 0) //play game option
             {
-                while(menu_options == 0)
-                {
-                    while (window.isOpen())
-                    {
+                while (menu_options == 0) {
+                    while (window.isOpen()) {
 
                         window.clear(Color::Black);
                         window.pollEvent(event);
@@ -205,13 +179,11 @@ int main()
                         ball.update();
                         paddle.update();
                         collision(paddle, ball);
-                        for (auto &block: blocks)
-                        {
+                        for (auto &block: blocks) {
 
-                                if (collision(block, ball))
-                                {
-                                    break;
-                                }
+                            if (collision(block, ball)) {
+                                break;
+                            }
 
                         }
 
@@ -220,20 +192,26 @@ int main()
                         blocks.erase(iterator, end(blocks));
 
 
-                        if(exblock.destroyed)
-                        {
-                            for (auto& block : blocks)
-                            {
-                                if ((((block.position().x == (((exblock.draw_number_x+1)-1)*105) && block.position().y == ((exblock.draw_number_y+1)-1)*65)))
-                                || (((block.position().x == (((exblock.draw_number_x+1)+1)*105) && block.position().y == ((exblock.draw_number_y+1))*65)))
-                                || (((block.position().x == (((exblock.draw_number_x+1)-1)*105) && block.position().y == (exblock.draw_number_y+1)*65)))
-                                || (((block.position().x == (((exblock.draw_number_x+1)-1)*105) && block.position().y == ((exblock.draw_number_y+1)+1)*65)))
-                                || (((block.position().x == (((exblock.draw_number_x+1))*105) && block.position().y == ((exblock.draw_number_y+1)+1)*65)))
-                                || (((block.position().x == ((exblock.draw_number_x+1)*105) && block.position().y == ((exblock.draw_number_y+1)-1)*65)))
-                                || (((block.position().x == (((exblock.draw_number_x+1)+1)*105) && block.position().y == ((exblock.draw_number_y+1)+1)*65)))
-                                || (((block.position().x == (((exblock.draw_number_x+1))*105) && block.position().y == ((exblock.draw_number_y+1))*65)))
-                                || (((block.position().x == (((exblock.draw_number_x+1)+1)*105) && block.position().y == ((exblock.draw_number_y+1)-1)*65))))
-                                {
+                        if (exblock.destroyed == true) {
+                            for (auto &block: blocks) {
+                                if ((((block.position().x == (((exblock.draw_number_x + 1) - 1) * 105) &&
+                                       block.position().y == ((exblock.draw_number_y + 1) - 1) * 65)))
+                                    || (((block.position().x == (((exblock.draw_number_x + 1) + 1) * 105) &&
+                                          block.position().y == ((exblock.draw_number_y + 1)) * 65)))
+                                    || (((block.position().x == (((exblock.draw_number_x + 1) - 1) * 105) &&
+                                          block.position().y == (exblock.draw_number_y + 1) * 65)))
+                                    || (((block.position().x == (((exblock.draw_number_x + 1) - 1) * 105) &&
+                                          block.position().y == ((exblock.draw_number_y + 1) + 1) * 65)))
+                                    || (((block.position().x == (((exblock.draw_number_x + 1)) * 105) &&
+                                          block.position().y == ((exblock.draw_number_y + 1) + 1) * 65)))
+                                    || (((block.position().x == ((exblock.draw_number_x + 1) * 105) &&
+                                          block.position().y == ((exblock.draw_number_y + 1) - 1) * 65)))
+                                    || (((block.position().x == (((exblock.draw_number_x + 1) + 1) * 105) &&
+                                          block.position().y == ((exblock.draw_number_y + 1) + 1) * 65)))
+                                    || (((block.position().x == (((exblock.draw_number_x + 1)) * 105) &&
+                                          block.position().y == ((exblock.draw_number_y + 1)) * 65)))
+                                    || (((block.position().x == (((exblock.draw_number_x + 1) + 1) * 105) &&
+                                          block.position().y == ((exblock.draw_number_y + 1) - 1) * 65)))) {
                                     block.destroy();
                                 }
                             }
@@ -242,8 +220,7 @@ int main()
 
 
 
-                        if (ball.getPosition().y > paddle.top())
-                        {
+                        if (ball.getPosition().y > paddle.top()) {
                             paddle.stop_paddle();
                             ball.under_paddle();
                             Font font;
@@ -257,7 +234,7 @@ int main()
                                                 15.f);
                             window.draw(endgame);
                             //wyświetlanie punktów;
-                            Text score_text("Total Score: " + std::to_string(score), font, 60);
+                            Text score_text("Total Score: " + to_string(score), font, 60);
                             score_text.setFillColor(Color::White);
                             score_text.setPosition(window.getSize().x / 2.f - score_text.getGlobalBounds().width / 2.f,
                                                    window.getSize().y / 2.f + endgame.getGlobalBounds().height / 2.f +
@@ -267,9 +244,11 @@ int main()
                             menu.draw_end_menu(window);
                             if (event.type == Event::KeyPressed) {
                                 if (event.key.code == Keyboard::Left) {
-                                    menu.MoveLeft();
+                                    menu.move_left();
+                                    std::this_thread::sleep_for(waiting_time);
                                 } else if (event.key.code == Keyboard::Right) {
-                                    menu.MoveRight();
+                                    menu.move_right();
+                                    std::this_thread::sleep_for(waiting_time);
                                 } else if (event.key.code == Keyboard::Return) {
                                     if (menu.pressed() == 0) //new game options
                                     {
@@ -277,35 +256,33 @@ int main()
                                         ball.reset_ball();
 
                                         for (auto &block: blocks) {
-                                            if(!block.destroyed) {
+                                            if (!block.destroyed) {
                                                 block.destroy();
                                             }
                                         }
                                         exblock.restore();
                                         exblock.restore();
                                         exblock.draw_number();
-                                        for(int i = 0; i< blocks_y;i++)
-                                        {
-                                            for(int j= 0; j < blocks_x; j++)
-                                            {
-                                                if (i == exblock.draw_number_y && j == exblock.draw_number_x)
-                                                {
+                                        for (int i = 0; i < blocks_y; i++) {
+                                            for (int j = 0; j < blocks_x; j++) {
+                                                if (i == exblock.draw_number_y && j == exblock.draw_number_x) {
                                                     exblock.set_position();
                                                     blocks.emplace_back(exblock);
-                                                }
-                                                else
-                                                {
-                                                    Block block((j + 1) * (block_width + 5), (i + 1) * (block_height + 5), block_width, block_height);
+                                                } else {
+                                                    Block block((j + 1) * (block_width + 5),
+                                                                (i + 1) * (block_height + 5), block_width,
+                                                                block_height);
                                                     blocks.emplace_back(block);
                                                 }
                                             }
                                         }
-                                        score =0;
+                                        score = 0;
                                         break;
+
                                     }
                                     if (menu.pressed() == 1) //back to menu options
                                     {
-                                        score =0;
+                                        score = 0;
                                         menu_options = 1;
                                         menu.all_on_white();
                                         ball.reset_ball();
@@ -313,33 +290,31 @@ int main()
                                         paddle.stop_paddle();
                                         exblock.restore();
                                         for (auto &block: blocks) {
-                                            if(!block.destroyed) {
+                                            if (!block.destroyed) {
                                                 block.destroy();
                                             }
                                         }
                                         exblock.draw_number();
-                                        for(int i = 0; i< blocks_y;i++)
-                                        {
-                                            for(int j= 0; j < blocks_x; j++)
-                                            {
-                                                if (i == exblock.draw_number_y && j == exblock.draw_number_x)
-                                                {
-                                                    explosiveblock exblock((j + 1) * (block_width + 5), (i + 1) * (block_height + 5), block_width, block_height);
+                                        for (int i = 0; i < blocks_y; i++) {
+                                            for (int j = 0; j < blocks_x; j++) {
+                                                if (i == exblock.draw_number_y && j == exblock.draw_number_x) {
+                                                    Explosiveblock exblock((j + 1) * (block_width + 5),
+                                                                           (i + 1) * (block_height + 5), block_width,
+                                                                           block_height);
                                                     blocks.emplace_back(exblock);
-                                                }
-                                                else
-                                                {
-                                                    Block block((j + 1) * (block_width + 5), (i + 1) * (block_height + 5), block_width, block_height);
+                                                } else {
+                                                    Block block((j + 1) * (block_width + 5),
+                                                                (i + 1) * (block_height + 5), block_width,
+                                                                block_height);
                                                     blocks.emplace_back(block);
                                                 }
                                             }
                                         }
                                         break;
+
                                     }
-                                    if (menu.pressed() == 2) //close game options
-                                    {
-                                        window.close();
-                                        return 0;
+                                    if (menu.pressed() == 2) {
+                                        menu_options = -1;
                                     }
                                 }
                             }
@@ -348,7 +323,7 @@ int main()
                         }//decision describing what will happen if the ball falls under the paddle
                         paddle.restore_velocity();
                         ball.stop_game();
-                        if (ball.is_stopped)// decision describing what will happen if we stop the game
+                        if (ball.is_stopped == true)// decision describing what will happen if we stop the game
                         {
                             if (ball.getPosition().y <= paddle.top()) // zapobiega wyświetlaniu pause po zakończeniu gry
                             {
@@ -367,11 +342,10 @@ int main()
                         }
 
                         Font font;                                              //display score
-                        if (!font.loadFromFile("Bambuchinnox.ttf"))
-                        {
+                        if (!font.loadFromFile("Bambuchinnox.ttf")) {
                             return -1;
                         }
-                        Text score_text("Score: " + std::to_string(score), font, 20);
+                        Text score_text("Score: " + to_string(score), font, 20);
                         score_text.setFillColor(Color::White);
                         score_text.setPosition(10.f, 10.f);
                         window.draw(score_text);
@@ -379,29 +353,24 @@ int main()
 
                         ball.update();
                         paddle.update();
-                        window.draw(ball.getShape());
-                        window.draw(paddle.getShape());
+                        window.draw(ball.get_shape());
+                        window.draw(paddle.get_shape());
 
-                        for (auto &block: blocks)
-                        {
-                                window.draw(block.getShape());
+                        for (auto &block: blocks) {
+                            window.draw(block.get_shape());
                         } //draw a blocks
                         window.display();
-                        if (blocks.empty())
-                        {
+                        if (blocks.empty()) {
                             exblock.draw_number();
-                            for(int i = 0; i< blocks_y;i++)
-                            {
-                                for(int j= 0; j < blocks_x; j++)
-                                {
-                                    if (i == exblock.draw_number_y && j == exblock.draw_number_x)
-                                    {
-                                        explosiveblock exblock((j + 1) * (block_width + 5), (i + 1) * (block_height + 5), block_width, block_height);
+                            for (int i = 0; i < blocks_y; i++) {
+                                for (int j = 0; j < blocks_x; j++) {
+                                    if (i == exblock.draw_number_y && j == exblock.draw_number_x) {
+                                        Explosiveblock exblock((j + 1) * (block_width + 5),
+                                                               (i + 1) * (block_height + 5), block_width, block_height);
                                         blocks.emplace_back(exblock);
-                                    }
-                                    else
-                                    {
-                                        Block block((j + 1) * (block_width + 5), (i + 1) * (block_height + 5), block_width, block_height);
+                                    } else {
+                                        Block block((j + 1) * (block_width + 5), (i + 1) * (block_height + 5),
+                                                    block_width, block_height);
                                         blocks.emplace_back(block);
                                     }
                                 }
@@ -409,16 +378,12 @@ int main()
                         } // function describing what will happen if all blocks are destroyed
                     }
                 }
-            }
-            else if (menu_options == 2)
-            {
-                while (window.isOpen())
-                {
+            } else if (menu_options == 2) {
+                while (window.isOpen()) {
                     window.clear(Color::Black);
                     window.pollEvent(event);
 
-                    if (event.type == Event::Closed)
-                    {
+                    if (event.type == Event::Closed) {
                         window.close();
                         return 0;
                     }
@@ -436,7 +401,9 @@ int main()
                     // Rysowanie przycisku "Back"
                     RectangleShape backButton(Vector2f(100.f, 40.f));
                     backButton.setFillColor(Color::Red);
-                    backButton.setPosition(posX/5 + instructionSprite.getGlobalBounds().width - 7*backButton.getSize().x, posY + instructionSprite.getGlobalBounds().height - backButton.getSize().y - 200.f);
+                    backButton.setPosition(
+                            posX / 5 + instructionSprite.getGlobalBounds().width - 7 * backButton.getSize().x,
+                            posY + instructionSprite.getGlobalBounds().height - backButton.getSize().y - 200.f);
                     window.draw(backButton);
 
                     // Tworzenie tekstu "Back"
@@ -447,24 +414,25 @@ int main()
                     }
                     Text backText("Back", font, 20); // Tekst "Back" z czcionką i rozmiarem 20
                     backText.setFillColor(Color::White);
-                    backText.setPosition(backButton.getPosition().x + backButton.getSize().x / 2.f - backText.getGlobalBounds().width / 2.f, backButton.getPosition().y + backButton.getSize().y / 3.f - backText.getGlobalBounds().height / 2.f);
+                    backText.setPosition(backButton.getPosition().x + backButton.getSize().x / 2.f -
+                                         backText.getGlobalBounds().width / 2.f,
+                                         backButton.getPosition().y + backButton.getSize().y / 3.f -
+                                         backText.getGlobalBounds().height / 2.f);
                     window.draw(backText);
 
                     window.display();
 
-                    if (event.type == Event::KeyPressed && event.key.code == Keyboard::Escape)
-                    {
+                    if (event.type == Event::KeyPressed && event.key.code == Keyboard::Escape) {
                         menu_options = 1; // Przejście do menu głównego po naciśnięciu klawisza Escape
                         break;
                     }
 
-                    if (event.type == Event::MouseButtonReleased && event.mouseButton.button == Mouse::Left)
-                    {
+                    if (event.type == Event::MouseButtonReleased && event.mouseButton.button == Mouse::Left) {
                         // Sprawdzenie, czy kliknięcie myszką nastąpiło na przycisku "Back"
-                        Vector2f mousePosition = window.mapPixelToCoords(Vector2i(event.mouseButton.x, event.mouseButton.y));
+                        Vector2f mousePosition = window.mapPixelToCoords(
+                                Vector2i(event.mouseButton.x, event.mouseButton.y));
 
-                        if (backButton.getGlobalBounds().contains(mousePosition))
-                        {
+                        if (backButton.getGlobalBounds().contains(mousePosition)) {
                             menu_options = 1; // Przejście do menu głównego po kliknięciu przycisku "Back"
                             break;
                         }

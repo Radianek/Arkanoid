@@ -4,14 +4,17 @@
 
 #ifndef PROJEKT_BLOCK_H
 #define PROJEKT_BLOCK_H
+
 #include <SFML/Graphics.hpp>
+
+using namespace sf;
 
 class Block {
 public:
     Block(float pos_X, float pos_Y, float width, float height); //block constructor
-    const sf::RectangleShape& getShape() const;     // function that return block shape
-    sf::Vector2f position();        //vector that stores the coordinates of the blocks
-    sf::Vector2f size();     //vector that stores the size of the blocks
+    const RectangleShape &get_shape() const;     // function that return block shape
+    Vector2f position();        //vector that stores the coordinates of the blocks
+    Vector2f size();     //vector that stores the size of the blocks
 
     float left(); //variable that returns the position of the left edge of the block
     float right();  //variable that returns the position of the right edge of the block
@@ -23,11 +26,11 @@ public:
     void restore();         //function that change block destroyed value to the false
     bool destroyed{false};  // variable that store a block destoryed value
     int points;     //variable that store a points value
-    sf::RectangleShape shape;  //object represent a block shape
+    RectangleShape shape;  //object represent a block shape
 
 private:
 
-    void draw(sf::RenderTarget& target, sf::RenderStates state)const; //function that draw a block
+    void draw(RenderTarget &target, RenderStates state) const; //function that draw a block
 };
 
 

@@ -1,21 +1,22 @@
 #ifndef BALL_H
 #define BALL_H
+
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 
 using namespace sf;
 
-class Ball{
+class Ball {
 public:
     Ball(float pos_X, float pos_Y);  // ball constructor
 
     // Pobierania kształtu piłki
-    const CircleShape& getShape() const;        // function that return ball shape
+    const CircleShape &get_shape() const;        // function that return ball shape
     void update(); // function that updates the position of the ball and bouncing off the edge
-    void moveDown(); //function that changes the direction of the ball down
-    void moveRight();  //function that changes the direction of the ball right
-    void moveLeft();    //function that changes the direction of the ball left
-    void moveUp();      //function that changes the direction of the ball up
+    void move_down_ball(); //function that changes the direction of the ball down
+    void move_right_ball();  //function that changes the direction of the ball right
+    void move_left_ball();    //function that changes the direction of the ball left
+    void move_up_ball();      //function that changes the direction of the ball up
     void under_paddle();    //function that changes ball parameter when the ball is under paddle
     void stop_game();   //function that stop the ball when press P on keyboard
     void reset_ball();  //function that reset the ball
@@ -36,8 +37,8 @@ private:
     CircleShape shape;  //object represent a ball shape
     const float ball_radius{25.0f};  //variable that stores a ball radius
     float ball_velocity{5.0f};       //variable that stores a ball rvelocity
-    Vector2f velocity {ball_velocity, ball_velocity};  //vector that stores information about ball velocity
-    void draw(RenderTarget& target, RenderStates state)const;  //function that draw a ball
+    Vector2f velocity{ball_velocity, ball_velocity};  //vector that stores information about ball velocity
+    void draw(RenderTarget &target, RenderStates state) const;  //function that draw a ball
 };
 
 #endif
