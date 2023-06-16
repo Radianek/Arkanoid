@@ -10,7 +10,7 @@
 
 using namespace sf;
 
-class Paddle : public ICollidable{
+class Paddle: public sf::RectangleShape, public ICollidable {
 public:
     Paddle(float pos_X, float pos_Y);       //paddle constructor
     void update();      // function that updates the position of the paddle and bouncing off the edge
@@ -23,10 +23,6 @@ public:
     void stop_paddle();     //function that stop the paddle when press P on keyboard
     void reset_paddle();       //function that reset the paddle
     Vector2f get_position();     //vector that stores the coordinates of the paddle
-
-    sf::FloatRect get_bounds() const override {
-        return sf::FloatRect(shape.getPosition(), shape.getSize());
-    }
 private:
 
     RectangleShape shape;       //object represent a paddle shape
@@ -34,9 +30,6 @@ private:
     const float paddle_height{20.0f};   //variable that stores a paddle height
     float paddle_velocity{6.0f};        //variable that stores a paddle velocity
     Vector2f velocity{paddle_velocity, 0};     //vector that stores information about paddle velocity
-
-
-
     void draw(RenderTarget &target, RenderStates state) const;      //function that draw a paddle
 };
 
